@@ -581,7 +581,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf0be4c7bc1f4b45bc61f6397b1a9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: {fileID: 5936709494931219027, guid: 21c01c9f04732e848a8c817a98a83f06, type: 3}
+  messagePrefab: {fileID: 5936709494931219027, guid: 21c01c9f04732e848a8c817a98a83f06, type: 3}
+  messagePoolAmount: 20
+  messagePool: []
 --- !u!4 &473824316
 Transform:
   m_ObjectHideFlags: 0
@@ -1291,7 +1293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1977378611
 Transform:
   m_ObjectHideFlags: 0
@@ -1483,9 +1485,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5936709493399299317, guid: 21c01c9f04732e848a8c817a98a83f06, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.38
+      objectReference: {fileID: 0}
     - target: {fileID: 5936709494931219026, guid: 21c01c9f04732e848a8c817a98a83f06, type: 3}
       propertyPath: m_Name
       value: Message
+      objectReference: {fileID: 0}
+    - target: {fileID: 5936709494931219026, guid: 21c01c9f04732e848a8c817a98a83f06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5936709494931219027, guid: 21c01c9f04732e848a8c817a98a83f06, type: 3}
       propertyPath: m_RootOrder
