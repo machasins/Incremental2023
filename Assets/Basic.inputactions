@@ -1,0 +1,11 @@
+{
+    "name": "Basic",
+    "maps": [],
+    "controlSchemes": [
+        {
+            "name": "Mouse",
+            "bindingGroup": "Mouse",
+            "devices": []
+        }
+    ]
+}

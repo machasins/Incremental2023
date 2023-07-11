@@ -1,0 +1,9 @@
+when stream
+
+hello
+
+where am i
+
+can i be admin
+
+what is this server
