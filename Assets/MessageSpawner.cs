@@ -16,7 +16,9 @@ public class MessageSpawner : MonoBehaviour
     private UserData userData;
     private int messageIndex = 0;
     [HideInInspector] public float totalHeight = 0.0f;
-    private float staticHeight = 0.0f;
+    private float additionalHeight = 0.0f;
+    private float historyHeight = 0.0f;
+    private bool isScrolling = false;
     private Vector3 startingPosition;
 
     void Start()
@@ -40,44 +42,30 @@ public class MessageSpawner : MonoBehaviour
         }
     }
 
-    void MoveList()
-    {
-        float precompScroll = Mathf.Lerp(0.0f, totalHeight - topHeight, scrollbar.value);
-        float previousHeight = totalHeight;
-
-        totalHeight = 0.0f;
-        for (int i = messagePoolAmount - 1; i >= 0; --i)
-        {
-            int index = (i + messageIndex) % messagePoolAmount;
-            if (messagePool[index].gameObject.activeInHierarchy)
-                totalHeight += messagePool[index].messageHeight;
-        }
-
-        scrollbar.value += (totalHeight - previousHeight) / (totalHeight - topHeight);
-
-        float currentHeight = 0.0f;
-        float modifier = -Mathf.Lerp(0.0f, totalHeight - topHeight, scrollbar.value);
-
-        for (int i = messagePoolAmount - 1; i >= 0; --i)
-        {
-            int index = (i + messageIndex) % messagePoolAmount;
-            if (messagePool[index].gameObject.activeInHierarchy)
-            {
-                currentHeight += messagePool[index].messageHeight;
-                messagePool[index].transform.localPosition = Vector3.up * (currentHeight + modifier);
-            }
-        }
-    }
-
     public void OnScroll()
     {
-        MoveList();
+        if (scrollbar.value > 0.0f)
+        {
+            isScrolling = true;
+            transform.localPosition = Vector3.Lerp(startingPosition + Vector3.up * totalHeight, startingPosition + Vector3.up * (topHeight + additionalHeight), scrollbar.value);
+        }
+        else
+        {
+            isScrolling = false;
+            transform.localPosition = startingPosition + Vector3.up * totalHeight;
+        }
     }
 
     MessageCreator GetMessageFromPool()
     {
         MessageCreator ret = messagePool[messageIndex];
-        ret.Create(null, Color.black, "", "", "");
+
+        if (ret.gameObject.activeInHierarchy)
+        {
+            historyHeight -= ret.messageHeight;
+            additionalHeight += ret.messageHeight;
+        }
+
         ret.transform.localPosition = Vector3.zero;
 
         messageIndex = (messageIndex + 1) % messagePoolAmount;
@@ -85,30 +73,47 @@ public class MessageSpawner : MonoBehaviour
         return ret;
     }
 
-    void AddMessage(Sprite icon, Color userColor, string username, string message, bool update = true)
+    void AddMessage(Sprite icon, Color userColor, string username, string message)
     {
         if (lastMessage && string.Equals(username, lastMessage.user))
+        {
+            totalHeight -= lastMessage.messageHeight;
+            historyHeight -= lastMessage.messageHeight;
             lastMessage.Append(message);
+            totalHeight += lastMessage.messageHeight;
+            historyHeight += lastMessage.messageHeight;
+        }
         else
         {
             MessageCreator mc = GetMessageFromPool();
             mc.gameObject.SetActive(true);
             mc.Create(icon, userColor, username, message, GetTime());
+
+            mc.transform.localPosition = Vector3.down * totalHeight;
+            totalHeight += mc.messageHeight;
+            historyHeight += mc.messageHeight;
+
             lastMessage = mc;
         }
-        if (update)
-            MoveList();
+
+        if (!isScrolling)
+            transform.localPosition = startingPosition + Vector3.up * totalHeight;
     }
 
-    void AddMessage(Sprite icon, Color userColor, string username, Sprite message, bool update = true)
+    void AddMessage(Sprite icon, Color userColor, string username, Sprite message)
     {
         MessageCreator mc = GetMessageFromPool();
         mc.gameObject.SetActive(true);
         mc.Create(icon, userColor, username, message, GetTime());
+
+        mc.transform.localPosition = Vector3.down * totalHeight;
+        totalHeight += mc.messageHeight;
+        historyHeight += mc.messageHeight;
+
         lastMessage = null;
 
-        if (update)
-            MoveList();
+        if (!isScrolling)
+            transform.localPosition = startingPosition + Vector3.up * totalHeight;
     }
 
     string GetTime()
@@ -129,18 +134,16 @@ public class MessageSpawner : MonoBehaviour
         {
             User u = userData.GetUser();
             if (Random.value < 0.1f)
-                AddMessage(u.userIcon, u.userColor, u.username, userData.GetImageMessage(u.type), false);
+                AddMessage(u.userIcon, u.userColor, u.username, userData.GetImageMessage(u.type));
             else
-                AddMessage(u.userIcon, u.userColor, u.username, userData.GetMessage(u.type), false);
+                AddMessage(u.userIcon, u.userColor, u.username, userData.GetMessage(u.type));
         }
-
-        MoveList();
     }
 
     IEnumerator loop()
     {
         userData.AddUser(20);
-        AddMessages(messagePoolAmount);
+        //AddMessages(messagePoolAmount);
         int count = 0;
         while (count < 150)
         {
