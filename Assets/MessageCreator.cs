@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class MessageCreator : MonoBehaviour
@@ -19,7 +20,18 @@ public class MessageCreator : MonoBehaviour
 
     [HideInInspector] public string user;
 
+    private static DefaultInputActions input;
 
+
+    void Start()
+    {
+        if (input == null)
+        {
+            input = new DefaultInputActions();
+            input.Enable();
+        }
+    }
+    
     public void Create(Sprite icon, Color userColor, string username, string timestamp)
     {
         this.icon.sprite = icon != null ? icon : this.icon.sprite;
@@ -70,6 +82,9 @@ public class MessageCreator : MonoBehaviour
 
     public void OnMouseOver()
     {
-        print(user);
+        if (input.UI.RightClick.WasPressedThisFrame())
+        {
+            transform.parent.GetComponent<MessageSpawner>().OnRightClick(icon.sprite, username.color, user, this);
+        }
     }
 }

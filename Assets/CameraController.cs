@@ -9,6 +9,8 @@ public class CameraController : MonoBehaviour
     public CinemachineVirtualCamera cam;
 
     public Transform followObject;
+    public float moveSpeed;
+    public Vector2 limitX;
     public float normalViewSize;
 
     public Transform computer;
@@ -21,6 +23,9 @@ public class CameraController : MonoBehaviour
     private bool isZoomed = false;
     private GameObject zoomButton;
     private float z;
+
+    private bool isMoving = false;
+    private int moveDirection = 0;
     
     void Start()
     {
@@ -36,11 +41,24 @@ public class CameraController : MonoBehaviour
         normalPosition = transform.localPosition;
     }
 
+    void Update()
+    {
+        if (isMoving)
+        {
+            Vector3 position = followObject.localPosition;
+            position += Vector3.right * moveDirection * moveSpeed * Time.deltaTime;
+            position = new Vector3(Mathf.Clamp(position.x, limitX.x, limitX.y), position.y, position.z);
+            followObject.localPosition = position;
+        }
+    }
+
     public void ZoomToComputer(GameObject button)
     {
         button.SetActive(false);
         zoomButton = button;
+
         cam.Follow = null;
+        isMoving = false;
 
         StartCoroutine(computerZoom());
     }
@@ -52,6 +70,20 @@ public class CameraController : MonoBehaviour
             isZoomed = false;
             StartCoroutine(unZoom());
         }
+    }
+
+    public void MoveCamera(int direction)
+    {
+        if (!isZoomed)
+        {
+            moveDirection = direction;
+            isMoving = true;
+        }
+    }
+
+    public void StopCamera()
+    {
+        isMoving = false;
     }
 
     IEnumerator computerZoom()
@@ -101,6 +133,7 @@ public class CameraController : MonoBehaviour
         }
         
         cam.m_Lens.OrthographicSize = normalViewSize;
+        cam.Follow = followObject;
 
         Vector3 finalPos = normalPosition;
         finalPos.z = z;

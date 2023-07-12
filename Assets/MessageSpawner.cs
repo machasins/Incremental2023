@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class MessageSpawner : MonoBehaviour
 {
     public Scrollbar scrollbar;
     public float topHeight;
+    public GameObject rightClickMenu;
 
     public Transform messagePrefab;
     public int messagePoolAmount;
@@ -25,6 +27,7 @@ public class MessageSpawner : MonoBehaviour
     {
         userData = GetComponent<UserData>();
         startingPosition = transform.localPosition;
+        rightClickMenu.SetActive(false);
 
         InstantiateMessagePool();
 
@@ -54,6 +57,19 @@ public class MessageSpawner : MonoBehaviour
             isScrolling = false;
             transform.localPosition = startingPosition + Vector3.up * totalHeight;
         }
+    }
+
+    public void OnRightClick(Sprite icon, Color userColor, string username, MessageCreator message)
+    {
+        rightClickMenu.SetActive(true);
+
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 20;
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        mousePos.z = rightClickMenu.transform.localPosition.z;
+        rightClickMenu.transform.localPosition = mousePos;
+
+        rightClickMenu.GetComponent<BanMenuSetup>().Create(rightClickMenu.transform.localPosition, icon, userColor, username);
     }
 
     MessageCreator GetMessageFromPool()
