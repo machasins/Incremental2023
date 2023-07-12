@@ -62,8 +62,8 @@ public class MessageSpawner : MonoBehaviour
 
         if (ret.gameObject.activeInHierarchy)
         {
-            historyHeight -= ret.messageHeight;
-            additionalHeight += ret.messageHeight;
+            historyHeight -= ret.height;
+            additionalHeight += ret.height;
         }
 
         ret.transform.localPosition = Vector3.zero;
@@ -77,11 +77,11 @@ public class MessageSpawner : MonoBehaviour
     {
         if (lastMessage && string.Equals(username, lastMessage.user))
         {
-            totalHeight -= lastMessage.messageHeight;
-            historyHeight -= lastMessage.messageHeight;
+            totalHeight -= lastMessage.height;
+            historyHeight -= lastMessage.height;
             lastMessage.Append(message);
-            totalHeight += lastMessage.messageHeight;
-            historyHeight += lastMessage.messageHeight;
+            totalHeight += lastMessage.height;
+            historyHeight += lastMessage.height;
         }
         else
         {
@@ -90,8 +90,8 @@ public class MessageSpawner : MonoBehaviour
             mc.Create(icon, userColor, username, message, GetTime());
 
             mc.transform.localPosition = Vector3.down * totalHeight;
-            totalHeight += mc.messageHeight;
-            historyHeight += mc.messageHeight;
+            totalHeight += mc.height;
+            historyHeight += mc.height;
 
             lastMessage = mc;
         }
@@ -107,8 +107,8 @@ public class MessageSpawner : MonoBehaviour
         mc.Create(icon, userColor, username, message, GetTime());
 
         mc.transform.localPosition = Vector3.down * totalHeight;
-        totalHeight += mc.messageHeight;
-        historyHeight += mc.messageHeight;
+        totalHeight += mc.height;
+        historyHeight += mc.height;
 
         lastMessage = null;
 
@@ -140,15 +140,30 @@ public class MessageSpawner : MonoBehaviour
         }
     }
 
+    void AddBannableMessages(int amount)
+    {
+        for (int i = 0; i < amount; ++i)
+        {
+            User u = userData.GetUser();
+            if (Random.value < 0.1f)
+                AddMessage(u.userIcon, u.userColor, u.username, userData.GetBannableImageMessage(u.type));
+            else
+                AddMessage(u.userIcon, u.userColor, u.username, userData.GetBannableMessage(u.type));
+        }
+    }
+
     IEnumerator loop()
     {
         userData.AddUser(20);
-        //AddMessages(messagePoolAmount);
+        AddMessages(messagePoolAmount);
         int count = 0;
         while (count < 150)
         {
-            AddMessages(1);
-            yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
+            if (count % 5 == 0)
+                AddBannableMessages(1);
+            else
+                AddMessages(1);
+            yield return new WaitForSeconds(Random.Range(0.5f, 1.5f));
             count++;
         }
 

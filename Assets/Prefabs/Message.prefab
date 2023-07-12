@@ -313,7 +313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.7799997, y: 0.3444858}
+  m_AnchoredPosition: {x: 20.21, y: 0.3444858}
   m_SizeDelta: {x: 4, y: 0.5}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!23 &5936709494447746962
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 1.9648762, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -460,6 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5936709494931219027}
   - component: {fileID: 5936709494931219024}
+  - component: {fileID: 7893837484894820586}
   m_Layer: 0
   m_Name: Message
   m_TagString: Untagged
@@ -499,16 +500,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882053e12afc80c4982ea5843e826f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageIcon: {fileID: 5936709495323104677}
-  messageUsername: {fileID: 5936709495283207843}
-  messageTextBox: {fileID: 5936709493399299210}
-  messageImage: {fileID: 4955161564699153790}
-  messageTimeStamp: {fileID: 5936709494447746973}
-  messageHeight: 0
-  messageMinHeight: 0.6
-  messageAddHeight: 0.5
-  messageMaxImageHeight: 5
+  icon: {fileID: 5936709495323104677}
+  username: {fileID: 5936709495283207843}
+  textBox: {fileID: 5936709493399299210}
+  image: {fileID: 4955161564699153790}
+  timeStamp: {fileID: 5936709494447746973}
+  hitbox: {fileID: 7893837484894820586}
+  height: 0
+  minHeight: 0.6
+  addHeight: 0.5
+  maxImageHeight: 5
   user: 
+--- !u!61 &7893837484894820586
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936709494931219026}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 10.882257, y: 0.093467474}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 22.764515, y: 1.1335254}
+  m_EdgeRadius: 0
 --- !u!1 &5936709495283207853
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +700,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -15.069469, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0

@@ -41,7 +41,9 @@ public class UserData : MonoBehaviour
     };
 
     private List<List<string>> messages;
+    private List<List<string>> banMessages;
     private List<List<Object>> messageImages;
+    private List<List<Object>> banMessageImages;
 
     void Start()
     {
@@ -53,15 +55,23 @@ public class UserData : MonoBehaviour
 
         messages = new List<List<string>>();
         for (int i = 0; i < (int)User.userType.maxUserType; ++i)
-            messages.Add(new List<string>((Instantiate(Resources.Load("m_" + ((User.userType)i).ToString())) as TextAsset).text.Split("\n\n")));
+            messages.Add(new List<string>((Instantiate(Resources.Load(((User.userType)i).ToString() + "/m")) as TextAsset).text.Split("\n\n")));
+
+        banMessages = new List<List<string>>();
+        for (int i = 0; i < (int)User.userType.maxUserType; ++i)
+            banMessages.Add(new List<string>((Instantiate(Resources.Load(((User.userType)i).ToString() + "/m_b")) as TextAsset).text.Split("\n\n")));
 
         messageImages = new List<List<Object>>();
         for (int i = 0; i < (int)User.userType.maxUserType; ++i)
-            messageImages.Add(new List<Object>(Resources.LoadAll("mi_" + ((User.userType)i).ToString(), typeof(Sprite))));
+            messageImages.Add(new List<Object>(Resources.LoadAll(((User.userType)i).ToString() + "/mi", typeof(Sprite))));
+
+        banMessageImages = new List<List<Object>>();
+        for (int i = 0; i < (int)User.userType.maxUserType; ++i)
+            banMessageImages.Add(new List<Object>(Resources.LoadAll(((User.userType)i).ToString() + "/mi_b", typeof(Sprite))));
 
         userIcons = new List<List<Object>>();
         for (int i = 0; i < (int)User.userType.maxUserType; ++i)
-            userIcons.Add(new List<Object>(Resources.LoadAll("a_" + ((User.userType)i).ToString(), typeof(Sprite))));
+            userIcons.Add(new List<Object>(Resources.LoadAll(((User.userType)i).ToString() + "/a", typeof(Sprite))));
 
         users = new List<User>();
     }
@@ -116,5 +126,15 @@ public class UserData : MonoBehaviour
     public Sprite GetImageMessage(User.userType type)
     {
         return Instantiate(messageImages[(int)type][Random.Range(0, messageImages[(int)type].Count)]) as Sprite;
+    }
+
+    public string GetBannableMessage(User.userType type)
+    {
+        return banMessages[(int)type][Random.Range(0, banMessages[(int)type].Count)];
+    }
+
+    public Sprite GetBannableImageMessage(User.userType type)
+    {
+        return Instantiate(banMessageImages[(int)type][Random.Range(0, banMessageImages[(int)type].Count)]) as Sprite;
     }
 }

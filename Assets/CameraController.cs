@@ -24,6 +24,8 @@ public class CameraController : MonoBehaviour
     
     void Start()
     {
+        Physics2D.queriesHitTriggers = true;
+
         currentViewSize = normalViewSize;
         cam.m_Lens.OrthographicSize = currentViewSize;
         

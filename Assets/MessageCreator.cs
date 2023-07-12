@@ -5,61 +5,71 @@ using TMPro;
 
 public class MessageCreator : MonoBehaviour
 {
-    public SpriteRenderer messageIcon;
-    public TMP_Text messageUsername;
-    public TMP_Text messageTextBox;
-    public SpriteRenderer messageImage;
-    public TMP_Text messageTimeStamp;
+    public SpriteRenderer icon;
+    public TMP_Text username;
+    public TMP_Text textBox;
+    public SpriteRenderer image;
+    public TMP_Text timeStamp;
+    public BoxCollider2D hitbox;
 
-    [HideInInspector] public float messageHeight;
-    public float messageMinHeight;
-    public float messageAddHeight;
-    public float messageMaxImageHeight;
+    [HideInInspector] public float height;
+    public float minHeight;
+    public float addHeight;
+    public float maxImageHeight;
 
     [HideInInspector] public string user;
 
+
     public void Create(Sprite icon, Color userColor, string username, string timestamp)
     {
-        messageIcon.sprite = icon != null ? icon : messageIcon.sprite;
-        messageUsername.text = username;
-        messageUsername.color = userColor;
-        messageTimeStamp.text = "Today at " + timestamp;
+        this.icon.sprite = icon != null ? icon : this.icon.sprite;
+        this.username.text = username;
+        this.username.color = userColor;
+        timeStamp.text = "Today at " + timestamp;
 
         if (icon)
-            messageIcon.size = icon.bounds.size / (Mathf.Min(icon.bounds.size.x, icon.bounds.size.y));
+            this.icon.size = icon.bounds.size / (Mathf.Min(icon.bounds.size.x, icon.bounds.size.y));
+
+        hitbox.size = new Vector2(hitbox.size.x, height * 2.0f);
+        hitbox.offset = new Vector2(hitbox.offset.x, addHeight - height);
 
         user = username;
     }
 
     public void Create(Sprite icon, Color userColor, string username, string message, string timestamp)
     {
+        textBox.gameObject.SetActive(true);
+
+        textBox.text = message;
+        height = Mathf.Max((textBox.preferredHeight / 2.0f) + addHeight, minHeight);
+
+        image.gameObject.SetActive(false);
+
         Create(icon, userColor, username, timestamp);
-
-        messageTextBox.gameObject.SetActive(true);
-
-        messageTextBox.text = message;
-        messageHeight = Mathf.Max((messageTextBox.preferredHeight / 2.0f) + messageAddHeight, messageMinHeight);
-
-        messageImage.gameObject.SetActive(false);
     }
     
     public void Create(Sprite icon, Color userColor, string username, Sprite message, string timestamp)
     {
+        image.gameObject.SetActive(true);
+
+        image.sprite = message;
+        image.size = message.bounds.size / (Mathf.Max(message.bounds.size.x, message.bounds.size.y));
+        image.transform.localScale = Vector2.one * maxImageHeight;
+        height = Mathf.Max((image.size.y * maxImageHeight / 2.0f) + addHeight, minHeight);
+
+        textBox.gameObject.SetActive(false);
+
         Create(icon, userColor, username, timestamp);
-
-        messageImage.gameObject.SetActive(true);
-
-        messageImage.sprite = message;
-        messageImage.size = message.bounds.size / (Mathf.Max(message.bounds.size.x, message.bounds.size.y));
-        messageImage.transform.localScale = Vector2.one * messageMaxImageHeight;
-        messageHeight = Mathf.Max((messageImage.size.y * messageMaxImageHeight / 2.0f) + messageAddHeight, messageMinHeight);
-
-        messageTextBox.gameObject.SetActive(false);
     }
 
     public void Append(string message)
     {
-        messageTextBox.text = messageTextBox.text + "\n\n" + message;
-        messageHeight = Mathf.Max((messageTextBox.preferredHeight / 2.0f) + messageAddHeight, messageMinHeight);
+        textBox.text = textBox.text + "\n\n" + message;
+        height = Mathf.Max((textBox.preferredHeight / 2.0f) + addHeight, minHeight);
+    }
+
+    public void OnMouseOver()
+    {
+        print(user);
     }
 }
