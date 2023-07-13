@@ -12,15 +12,20 @@ public class CameraController : MonoBehaviour
     public float moveSpeed;
     public Vector2 limitX;
     public float normalViewSize;
+    public float timeZoomNormal;
 
     public Transform computer;
     public float computerViewSize;
     public float timeZoomComputer;
-    public float timeZoomNormal;
+
+    public Transform tablet;
+    public float tabletViewSize;
+    public float timeZoomTablet;
 
     private float currentViewSize;
     private Vector3 normalPosition;
     private bool isZoomed = false;
+    private bool isZooming = false;
     private GameObject zoomButton;
     private float z;
 
@@ -54,20 +59,43 @@ public class CameraController : MonoBehaviour
 
     public void ZoomToComputer(GameObject button)
     {
-        button.SetActive(false);
-        zoomButton = button;
+        if (!isZooming)
+        {
+            isZooming = true;
 
-        cam.Follow = null;
-        isMoving = false;
+            button.SetActive(false);
+            zoomButton = button;
 
-        StartCoroutine(computerZoom());
+            cam.Follow = null;
+            isMoving = false;
+
+            StartCoroutine(objectZoom(computer, computerViewSize));
+        }
+    }
+
+    public void ZoomToTablet(GameObject button)
+    {
+        if (!isZooming)
+        {
+            isZooming = true;
+            
+            button.SetActive(false);
+            zoomButton = button;
+
+            cam.Follow = null;
+            isMoving = false;
+
+            StartCoroutine(objectZoom(tablet, tabletViewSize));
+        }
     }
 
     public void OnCancel(InputAction.CallbackContext context)
     {
-        if (isZoomed)
+        if (isZoomed && !isZooming)
         {
             isZoomed = false;
+            isZooming = true;
+
             StartCoroutine(unZoom());
         }
     }
@@ -86,7 +114,7 @@ public class CameraController : MonoBehaviour
         isMoving = false;
     }
 
-    IEnumerator computerZoom()
+    IEnumerator objectZoom(Transform obj, float viewSize)
     {
         float time = 0.0f;
         Vector3 position = transform.localPosition;
@@ -94,9 +122,9 @@ public class CameraController : MonoBehaviour
 
         while (time <= timeZoomComputer)
         {
-            cam.m_Lens.OrthographicSize = Mathf.Lerp(currentViewSize, computerViewSize, Mathf.SmoothStep(0.0f, 1.0f, time / timeZoomComputer));
+            cam.m_Lens.OrthographicSize = Mathf.Lerp(currentViewSize, viewSize, Mathf.SmoothStep(0.0f, 1.0f, time / timeZoomComputer));
 
-            Vector3 newPos = Vector3.Lerp(position, computer.position, Mathf.SmoothStep(0.0f, 1.0f, time / timeZoomComputer));
+            Vector3 newPos = Vector3.Lerp(position, obj.position, Mathf.SmoothStep(0.0f, 1.0f, time / timeZoomComputer));
             newPos.z = z;
             transform.localPosition = newPos;
 
@@ -104,14 +132,16 @@ public class CameraController : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         
-        cam.m_Lens.OrthographicSize = computerViewSize;
+        cam.m_Lens.OrthographicSize = viewSize;
 
-        Vector3 finalPos = computer.position;
+        Vector3 finalPos = obj.position;
         finalPos.z = z;
         transform.localPosition = finalPos;
 
         normalPosition = position;
-        currentViewSize = computerViewSize;
+        currentViewSize = viewSize;
+
+        isZooming = false;
         isZoomed = true;
     }
 
@@ -120,7 +150,7 @@ public class CameraController : MonoBehaviour
         float time = 0.0f;
         Vector3 position = transform.localPosition;
 
-        while (time <= timeZoomComputer)
+        while (time <= timeZoomNormal)
         {
             cam.m_Lens.OrthographicSize = Mathf.Lerp(currentViewSize, normalViewSize, Mathf.SmoothStep(0.0f, 1.0f, time / timeZoomNormal));
 
@@ -141,5 +171,7 @@ public class CameraController : MonoBehaviour
 
         zoomButton.SetActive(true);
         currentViewSize = normalViewSize;
+
+        isZooming = false;
     }
 }

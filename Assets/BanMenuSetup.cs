@@ -14,8 +14,11 @@ public class BanMenuSetup : MonoBehaviour
     public SpriteRenderer icon;
     public TMP_Text username;
 
-    private bool mouseHovered = false;
+    public WorldButton banButton;
 
+    [HideInInspector] public bool mouseHovered = false;
+
+    private MessageSpawner handler;
     private DefaultInputActions input;
 
     void Start()
@@ -26,11 +29,17 @@ public class BanMenuSetup : MonoBehaviour
 
     void Update()
     {
-        if ((input.UI.Click.WasPressedThisFrame() && !mouseHovered) || input.UI.Cancel.WasPressedThisFrame())
+        print(mouseHovered + " " +  banButton.mouseHovered);
+        if ((input.UI.Click.WasPressedThisFrame() && (!mouseHovered && !banButton.mouseHovered)) || input.UI.Cancel.WasPressedThisFrame())
             gameObject.SetActive(false);
     }
 
-    public void Create(Vector3 position, Sprite icon, Color userColor, string username)
+    void OnDisable()
+    {
+        mouseHovered = false;
+    }
+
+    public void Create(Vector3 position, Sprite icon, Color userColor, string username, MessageSpawner caller)
     {
         this.icon.sprite = icon;
 
@@ -46,6 +55,18 @@ public class BanMenuSetup : MonoBehaviour
             transform.localPosition -= Vector3.up * (position.y + heightBounds.x - limitY.x);
         if (position.y - heightBounds.y < limitY.y)
             transform.localPosition -= Vector3.down * (limitY.y - (position.y - heightBounds.y));
+
+        handler = caller;
+    }
+
+    public void BanUser()
+    {
+        handler.BanUser();
+    }
+
+    public void CloseMenu()
+    {
+        gameObject.SetActive(false);
     }
 
     void OnMouseOver()

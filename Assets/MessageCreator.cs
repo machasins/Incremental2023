@@ -18,7 +18,8 @@ public class MessageCreator : MonoBehaviour
     public float addHeight;
     public float maxImageHeight;
 
-    [HideInInspector] public string user;
+    [HideInInspector] public User user;
+    [HideInInspector] public bool bannable;
 
     private static DefaultInputActions input;
 
@@ -32,9 +33,9 @@ public class MessageCreator : MonoBehaviour
         }
     }
     
-    public void Create(Sprite icon, Color userColor, string username, string timestamp)
+    void Create(Sprite icon, Color userColor, string username, string timestamp)
     {
-        this.icon.sprite = icon != null ? icon : this.icon.sprite;
+        this.icon.sprite = icon;
         this.username.text = username;
         this.username.color = userColor;
         timeStamp.text = "Today at " + timestamp;
@@ -42,13 +43,12 @@ public class MessageCreator : MonoBehaviour
         if (icon)
             this.icon.size = icon.bounds.size / (Mathf.Min(icon.bounds.size.x, icon.bounds.size.y));
 
+        hitbox.enabled = true;
         hitbox.size = new Vector2(hitbox.size.x, height * 2.0f);
         hitbox.offset = new Vector2(hitbox.offset.x, addHeight - height);
-
-        user = username;
     }
 
-    public void Create(Sprite icon, Color userColor, string username, string message, string timestamp)
+    public void Create(User user, string message, string timestamp, bool bannable = false)
     {
         textBox.gameObject.SetActive(true);
 
@@ -57,10 +57,13 @@ public class MessageCreator : MonoBehaviour
 
         image.gameObject.SetActive(false);
 
-        Create(icon, userColor, username, timestamp);
+        this.user = user;
+        this.bannable = bannable;
+
+        Create(user.userIcon, user.userColor, user.username, timestamp);
     }
     
-    public void Create(Sprite icon, Color userColor, string username, Sprite message, string timestamp)
+    public void Create(User user, Sprite message, string timestamp, bool bannable = false)
     {
         image.gameObject.SetActive(true);
 
@@ -71,20 +74,41 @@ public class MessageCreator : MonoBehaviour
 
         textBox.gameObject.SetActive(false);
 
-        Create(icon, userColor, username, timestamp);
+        this.user = user;
+        this.bannable = bannable;
+
+        Create(user.userIcon, user.userColor, user.username, timestamp);
     }
 
-    public void Append(string message)
+    public void Append(string message, bool bannable = false)
     {
         textBox.text = textBox.text + "\n\n" + message;
         height = Mathf.Max((textBox.preferredHeight / 2.0f) + addHeight, minHeight);
+
+        this.bannable |= bannable;
+    }
+
+    public void DisplayBanned(User invalid)
+    {
+        this.icon.sprite = invalid.userIcon;
+        this.username.text = invalid.username;
+        this.username.color = invalid.userColor;
+
+        if (icon)
+            this.icon.size = icon.bounds.size / (Mathf.Min(icon.bounds.size.x, icon.bounds.size.y));
+
+        textBox.gameObject.SetActive(true);
+        image.gameObject.SetActive(false);
+        textBox.text = "[removed]";
+
+        hitbox.enabled = false;
     }
 
     public void OnMouseOver()
     {
-        if (input.UI.RightClick.WasPressedThisFrame())
+        if (input != null && input.UI.RightClick.WasPressedThisFrame())
         {
-            transform.parent.GetComponent<MessageSpawner>().OnRightClick(icon.sprite, username.color, user, this);
+            transform.parent.GetComponent<MessageSpawner>().OnRightClick(icon.sprite, username.color, user.username, this);
         }
     }
 }

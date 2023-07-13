@@ -9,29 +9,28 @@ public class MessageSpawner : MonoBehaviour
     public Scrollbar scrollbar;
     public float topHeight;
     public GameObject rightClickMenu;
+    public PlayerData player;
+    public UserData userData;
 
     public Transform messagePrefab;
     public int messagePoolAmount;
 
     private List<MessageCreator> messagePool;
     private MessageCreator lastMessage;
-    private UserData userData;
     private int messageIndex = 0;
     [HideInInspector] public float totalHeight = 0.0f;
     private float additionalHeight = 0.0f;
     private float historyHeight = 0.0f;
     private bool isScrolling = false;
     private Vector3 startingPosition;
+    private MessageCreator clickedMessage;
 
     void Start()
     {
-        userData = GetComponent<UserData>();
         startingPosition = transform.localPosition;
         rightClickMenu.SetActive(false);
 
         InstantiateMessagePool();
-
-        StartCoroutine(loop());
     }
 
     void InstantiateMessagePool()
@@ -69,7 +68,9 @@ public class MessageSpawner : MonoBehaviour
         mousePos.z = rightClickMenu.transform.localPosition.z;
         rightClickMenu.transform.localPosition = mousePos;
 
-        rightClickMenu.GetComponent<BanMenuSetup>().Create(rightClickMenu.transform.localPosition, icon, userColor, username);
+        rightClickMenu.GetComponent<BanMenuSetup>().Create(rightClickMenu.transform.localPosition, icon, userColor, username, this);
+
+        clickedMessage = message;
     }
 
     MessageCreator GetMessageFromPool()
@@ -89,13 +90,13 @@ public class MessageSpawner : MonoBehaviour
         return ret;
     }
 
-    void AddMessage(Sprite icon, Color userColor, string username, string message)
+    void AddMessage(User user, string message, bool bannable = false)
     {
-        if (lastMessage && string.Equals(username, lastMessage.user))
+        if (lastMessage && string.Equals(user.username, lastMessage.user.username))
         {
             totalHeight -= lastMessage.height;
             historyHeight -= lastMessage.height;
-            lastMessage.Append(message);
+            lastMessage.Append(message, bannable);
             totalHeight += lastMessage.height;
             historyHeight += lastMessage.height;
         }
@@ -103,7 +104,7 @@ public class MessageSpawner : MonoBehaviour
         {
             MessageCreator mc = GetMessageFromPool();
             mc.gameObject.SetActive(true);
-            mc.Create(icon, userColor, username, message, GetTime());
+            mc.Create(user, message, GetTime(), bannable);
 
             mc.transform.localPosition = Vector3.down * totalHeight;
             totalHeight += mc.height;
@@ -116,11 +117,11 @@ public class MessageSpawner : MonoBehaviour
             transform.localPosition = startingPosition + Vector3.up * totalHeight;
     }
 
-    void AddMessage(Sprite icon, Color userColor, string username, Sprite message)
+    void AddMessage(User user, Sprite message, bool bannable = false)
     {
         MessageCreator mc = GetMessageFromPool();
         mc.gameObject.SetActive(true);
-        mc.Create(icon, userColor, username, message, GetTime());
+        mc.Create(user, message, GetTime(), bannable);
 
         mc.transform.localPosition = Vector3.down * totalHeight;
         totalHeight += mc.height;
@@ -144,44 +145,58 @@ public class MessageSpawner : MonoBehaviour
         return formattedTime;
     }
 
-    void AddMessages(int amount)
+    public void AddMessages(int amount)
     {
         for (int i = 0; i < amount; ++i)
         {
             User u = userData.GetUser();
             if (Random.value < 0.1f)
-                AddMessage(u.userIcon, u.userColor, u.username, userData.GetImageMessage(u.type));
+                AddMessage(u, userData.GetImageMessage(u.type));
             else
-                AddMessage(u.userIcon, u.userColor, u.username, userData.GetMessage(u.type));
+                AddMessage(u, userData.GetMessage(u.type));
         }
     }
 
-    void AddBannableMessages(int amount)
+    public void AddBannableMessages(int amount)
     {
         for (int i = 0; i < amount; ++i)
         {
             User u = userData.GetUser();
             if (Random.value < 0.1f)
-                AddMessage(u.userIcon, u.userColor, u.username, userData.GetBannableImageMessage(u.type));
+                AddMessage(u, userData.GetBannableImageMessage(u.type), true);
             else
-                AddMessage(u.userIcon, u.userColor, u.username, userData.GetBannableMessage(u.type));
+                AddMessage(u, userData.GetBannableMessage(u.type), true);
         }
     }
 
-    IEnumerator loop()
+    public void BanUser()
     {
-        userData.AddUser(20);
-        AddMessages(messagePoolAmount);
-        int count = 0;
-        while (count < 150)
+        if (clickedMessage)
         {
-            if (count % 5 == 0)
-                AddBannableMessages(1);
-            else
-                AddMessages(1);
-            yield return new WaitForSeconds(Random.Range(0.5f, 1.5f));
-            count++;
-        }
+            bool bannable = clickedMessage.bannable;
 
+            User user = clickedMessage.user;
+
+            if (lastMessage && lastMessage.user.guid == user.guid)
+                lastMessage = null;
+
+            foreach (MessageCreator m in messagePool)
+            {
+                if (m.gameObject.activeInHierarchy && m.user.guid == user.guid)
+                {
+                    bannable |= m.bannable;
+                    m.DisplayBanned(userData.invalidUser);
+                }
+            }
+
+            print(bannable);
+            if (bannable)
+                player.AddMoney(1);
+
+            userData.RemoveUser(user);
+
+            clickedMessage = null;
+        }
     }
+
 }

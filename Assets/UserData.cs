@@ -17,6 +17,7 @@ public class User
     public string username;
     public Color userColor;
     public Sprite userIcon;
+    public System.Guid guid;
     public userType type;
 }
 
@@ -26,6 +27,7 @@ public class UserData : MonoBehaviour
     public float usernameAddonChance;
     public float usernameNumberChance;
     public float usernameYearChance;
+
 
     [HideInInspector] public List<User> users;
     private List<List<string>> usernames;
@@ -44,6 +46,8 @@ public class UserData : MonoBehaviour
     private List<List<string>> banMessages;
     private List<List<Object>> messageImages;
     private List<List<Object>> banMessageImages;
+
+    public User invalidUser;
 
     void Start()
     {
@@ -74,6 +78,11 @@ public class UserData : MonoBehaviour
             userIcons.Add(new List<Object>(Resources.LoadAll(((User.userType)i).ToString() + "/a", typeof(Sprite))));
 
         users = new List<User>();
+
+        invalidUser = new User();
+        invalidUser.userColor = Color.gray;
+        invalidUser.userIcon = null;
+        invalidUser.username = "[removed]";
     }
 
     public void AddUser(int num)
@@ -89,6 +98,7 @@ public class UserData : MonoBehaviour
         u.username = usernames[(int)u.type][Random.Range(0, usernames[(int)u.type].Count)];
         u.userColor = userColors[Random.Range(0, userColors.Length)];
         u.userIcon = Instantiate(userIcons[(int)u.type][Random.Range(0, userIcons[(int)u.type].Count)]) as Sprite;
+        u.guid = System.Guid.NewGuid();
         
         if (Random.value <= usernameAddonChance)
         {
@@ -111,6 +121,11 @@ public class UserData : MonoBehaviour
         }
 
         users.Add(u);
+    }
+
+    public void RemoveUser(User user)
+    {
+        users.Remove(user);
     }
 
     public User GetUser()
