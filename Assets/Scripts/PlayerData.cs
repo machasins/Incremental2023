@@ -9,17 +9,17 @@ public class PlayerData : MonoBehaviour
     private float money = 0.0f;
     private float moneyMult = 1.0f;
 
-    private User.userType currentFactionType = User.userType.maxUserType;
+    private User.Type currentFactionType = User.Type.maxUserType;
     [HideInInspector] public float[] factionBanBonus;
     [HideInInspector] public float[] factionBannableBonusRate;
 
     void Start()
     {
-        factionBanBonus = new float[(int)User.userType.maxUserType];
+        factionBanBonus = new float[(int)User.Type.maxUserType];
         for (int i = 0; i < factionBanBonus.Length; ++i)
             factionBanBonus[i] = 0.0f;
 
-        factionBannableBonusRate = new float[(int)User.userType.maxUserType];
+        factionBannableBonusRate = new float[(int)User.Type.maxUserType];
         for (int i = 0; i < factionBannableBonusRate.Length; ++i)
             factionBannableBonusRate[i] = 0.0f;
     }
@@ -50,14 +50,14 @@ public class PlayerData : MonoBehaviour
         return moneyMult;
     }
 
-    public void AddBanMoney(User.userType type)
+    public void AddBanMoney(User.Type type)
     {
         money += baseBanMoney + factionBanBonus[(int)type];
     }
 
     public void AddBanMoney(string userType)
     {
-        money += baseBanMoney + factionBanBonus[(int)(User.userType)System.Enum.Parse(typeof(User.userType), userType)];
+        money += baseBanMoney + factionBanBonus[(int)(User.Type)System.Enum.Parse(typeof(User.Type), userType)];
     }
 
     public void AddInteractMoney(int streamer)
@@ -67,7 +67,7 @@ public class PlayerData : MonoBehaviour
 
     public void ChangeIncrementUserType(string userType)
     {
-        currentFactionType = (User.userType)System.Enum.Parse(typeof(User.userType), userType);
+        currentFactionType = (User.Type)System.Enum.Parse(typeof(User.Type), userType);
     }
 
     public void IncreaseFactionBanBonus(float amount)

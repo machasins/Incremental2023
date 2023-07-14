@@ -19,6 +19,8 @@ public class MessageSpawner : MonoBehaviour
     public int maximumConsecutiveNormalMessages = 10;
 
     [HideInInspector] public List<MessageCreator> messagePool;
+    public delegate void PingNewMessage(MessageCreator m);
+    [HideInInspector] public PingNewMessage newMessage;
 
     private BotHandler bots;
 
@@ -115,7 +117,7 @@ public class MessageSpawner : MonoBehaviour
         return ret;
     }
 
-    void AddMessage(User user, string message, bool bannable = false)
+    public void AddMessage(User user, string message, bool bannable = false)
     {
         if (lastMessage && string.Equals(user.username, lastMessage.user.username))
         {
@@ -140,9 +142,11 @@ public class MessageSpawner : MonoBehaviour
 
         if (!isScrolling)
             transform.localPosition = startingPosition + Vector3.up * totalHeight;
+
+        if (newMessage != null) newMessage(lastMessage);
     }
 
-    void AddMessage(User user, Sprite message, bool bannable = false)
+    public void AddMessage(User user, Sprite message, bool bannable = false)
     {
         MessageCreator mc = GetMessageFromPool();
         mc.gameObject.SetActive(true);
@@ -156,12 +160,14 @@ public class MessageSpawner : MonoBehaviour
 
         if (!isScrolling)
             transform.localPosition = startingPosition + Vector3.up * totalHeight;
+            
+        if (newMessage != null) newMessage(lastMessage);
     }
 
     string GetTime()
     {
         const int timescale = 2;
-        int time = (int)(Time.fixedTime % (1440 * timescale) / timescale);
+        int time = (int)((Time.fixedTime + 17*60*timescale) % (1440 * timescale) / timescale);
         string hours = (((time / 60) % 12 == 0) ? 12 : (time / 60) % 12).ToString();
         string minutes = (time % 60).ToString("D2");
         string ampm = (time > 719) ? "PM" : "AM";

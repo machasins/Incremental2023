@@ -90,8 +90,15 @@ public class MessageCreator : MonoBehaviour
     {
         textBox.text = textBox.text + "\n\n" + message;
         height = Mathf.Max((textBox.preferredHeight / 2.0f) + addHeight, minHeight);
-
+        
         this.bannable |= bannable;
+
+        hitbox.size = new Vector2(hitbox.size.x, height * 2.0f);
+        hitbox.offset = new Vector2(hitbox.offset.x, addHeight - height + addHeight / 2.0f);
+
+        banHighlight.enabled = (visibleBanUpgrade) ? bannable : false;
+        banHighlight.size = hitbox.size;
+        banHighlight.transform.localPosition = hitbox.offset;
     }
 
     public void DisplayBanned(User invalid)

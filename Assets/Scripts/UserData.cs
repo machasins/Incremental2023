@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class User
 {
-    public enum userType
+    public enum Type
     {
         normal,
         furry,
@@ -14,11 +14,23 @@ public class User
         maxUserType
     };
 
+    public enum Status
+    {
+        online,
+        away,
+        dnd,
+        offline,
+        maxUserStatus
+    };
+
     public string username;
     public Color userColor;
     public Sprite userIcon;
+    public Status status;
     public System.Guid guid;
-    public userType type;
+    public Type type;
+
+    public bool canBan = true;
 }
 
 public class UserData : MonoBehaviour
@@ -27,7 +39,11 @@ public class UserData : MonoBehaviour
     public float usernameAddonChance;
     public float usernameNumberChance;
     public float usernameYearChance;
-
+    
+    public delegate void AddedUser(User u);
+    public delegate void RemovedUser(User u);
+    [HideInInspector] public AddedUser addedUser;
+    [HideInInspector] public RemovedUser removedUser;
 
     [HideInInspector] public List<User> users;
     private List<List<string>> usernames;
@@ -58,24 +74,24 @@ public class UserData : MonoBehaviour
             usernames.Add(new List<string>(l.Split('\n')));
 
         messages = new List<List<string>>();
-        for (int i = 0; i < (int)User.userType.maxUserType; ++i)
-            messages.Add(new List<string>((Instantiate(Resources.Load(((User.userType)i).ToString() + "/m")) as TextAsset).text.Split("\n\n")));
+        for (int i = 0; i < (int)User.Type.maxUserType; ++i)
+            messages.Add(new List<string>((Instantiate(Resources.Load(((User.Type)i).ToString() + "/m")) as TextAsset).text.Split("\n\n")));
 
         banMessages = new List<List<string>>();
-        for (int i = 0; i < (int)User.userType.maxUserType; ++i)
-            banMessages.Add(new List<string>((Instantiate(Resources.Load(((User.userType)i).ToString() + "/m_b")) as TextAsset).text.Split("\n\n")));
+        for (int i = 0; i < (int)User.Type.maxUserType; ++i)
+            banMessages.Add(new List<string>((Instantiate(Resources.Load(((User.Type)i).ToString() + "/m_b")) as TextAsset).text.Split("\n\n")));
 
         messageImages = new List<List<Object>>();
-        for (int i = 0; i < (int)User.userType.maxUserType; ++i)
-            messageImages.Add(new List<Object>(Resources.LoadAll(((User.userType)i).ToString() + "/mi", typeof(Sprite))));
+        for (int i = 0; i < (int)User.Type.maxUserType; ++i)
+            messageImages.Add(new List<Object>(Resources.LoadAll(((User.Type)i).ToString() + "/mi", typeof(Sprite))));
 
         banMessageImages = new List<List<Object>>();
-        for (int i = 0; i < (int)User.userType.maxUserType; ++i)
-            banMessageImages.Add(new List<Object>(Resources.LoadAll(((User.userType)i).ToString() + "/mi_b", typeof(Sprite))));
+        for (int i = 0; i < (int)User.Type.maxUserType; ++i)
+            banMessageImages.Add(new List<Object>(Resources.LoadAll(((User.Type)i).ToString() + "/mi_b", typeof(Sprite))));
 
         userIcons = new List<List<Object>>();
-        for (int i = 0; i < (int)User.userType.maxUserType; ++i)
-            userIcons.Add(new List<Object>(Resources.LoadAll(((User.userType)i).ToString() + "/a", typeof(Sprite))));
+        for (int i = 0; i < (int)User.Type.maxUserType; ++i)
+            userIcons.Add(new List<Object>(Resources.LoadAll(((User.Type)i).ToString() + "/a", typeof(Sprite))));
 
         users = new List<User>();
 
@@ -94,7 +110,8 @@ public class UserData : MonoBehaviour
     public void AddUser()
     {
         User u = new User();
-        u.type = (User.userType)Random.Range(0, (int)User.userType.maxUserType);
+        u.type = (User.Type)Random.Range(0, (int)User.Type.maxUserType);
+        u.status = (User.Status)Random.Range(0, (int)User.Status.maxUserStatus);
         u.username = usernames[(int)u.type][Random.Range(0, usernames[(int)u.type].Count)];
         u.userColor = userColors[Random.Range(0, userColors.Length)];
         u.userIcon = Instantiate(userIcons[(int)u.type][Random.Range(0, userIcons[(int)u.type].Count)]) as Sprite;
@@ -121,11 +138,15 @@ public class UserData : MonoBehaviour
         }
 
         users.Add(u);
+
+        if (addedUser != null) addedUser(u);
     }
 
     public void RemoveUser(User user)
     {
         users.Remove(user);
+        
+        if (removedUser != null) removedUser(user);
     }
 
     public User GetUser()
@@ -133,22 +154,22 @@ public class UserData : MonoBehaviour
         return users[Random.Range(0, users.Count)];
     }
 
-    public string GetMessage(User.userType type)
+    public string GetMessage(User.Type type)
     {
         return messages[(int)type][Random.Range(0, messages[(int)type].Count)];
     }
 
-    public Sprite GetImageMessage(User.userType type)
+    public Sprite GetImageMessage(User.Type type)
     {
         return Instantiate(messageImages[(int)type][Random.Range(0, messageImages[(int)type].Count)]) as Sprite;
     }
 
-    public string GetBannableMessage(User.userType type)
+    public string GetBannableMessage(User.Type type)
     {
         return banMessages[(int)type][Random.Range(0, banMessages[(int)type].Count)];
     }
 
-    public Sprite GetBannableImageMessage(User.userType type)
+    public Sprite GetBannableImageMessage(User.Type type)
     {
         return Instantiate(banMessageImages[(int)type][Random.Range(0, banMessageImages[(int)type].Count)]) as Sprite;
     }
