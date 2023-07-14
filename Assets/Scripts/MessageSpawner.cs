@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class MessageSpawner : MonoBehaviour
 {
     public Scrollbar scrollbar;
+    public float scrollAmount;
     public float topHeight;
     public GameObject rightClickMenu;
     public PlayerData player;
@@ -15,7 +16,12 @@ public class MessageSpawner : MonoBehaviour
     public Transform messagePrefab;
     public int messagePoolAmount;
 
-    private List<MessageCreator> messagePool;
+    public int maximumConsecutiveNormalMessages = 10;
+
+    [HideInInspector] public List<MessageCreator> messagePool;
+
+    private BotHandler bots;
+
     private MessageCreator lastMessage;
     private int messageIndex = 0;
     [HideInInspector] public float totalHeight = 0.0f;
@@ -24,13 +30,23 @@ public class MessageSpawner : MonoBehaviour
     private bool isScrolling = false;
     private Vector3 startingPosition;
     private MessageCreator clickedMessage;
+    private int lastBannableMessage = 0;
 
     void Start()
     {
+        bots = player.GetComponent<BotHandler>();
+
         startingPosition = transform.localPosition;
         rightClickMenu.SetActive(false);
 
         InstantiateMessagePool();
+    }
+
+    void Update()
+    {
+        Vector2 scrollValue = Mouse.current.scroll.ReadValue().normalized;
+        Vector2 limits = new Vector2(topHeight + additionalHeight, totalHeight);
+        scrollbar.value = Mathf.Clamp01(scrollbar.value + scrollAmount / (limits.y - limits.x) * scrollValue.y);
     }
 
     void InstantiateMessagePool()
@@ -81,6 +97,15 @@ public class MessageSpawner : MonoBehaviour
         {
             historyHeight -= ret.height;
             additionalHeight += ret.height;
+
+            if (ret.bannable && bots.CleanupSuccess())
+            {
+                clickedMessage = ret;
+                clickedMessage.bannable = false;
+                BanUser();
+
+                player.AddMoney(player.baseBanMoney * bots.cleanupBotPercentMoneyPerBan);
+            }
         }
 
         ret.transform.localPosition = Vector3.zero;
@@ -145,27 +170,20 @@ public class MessageSpawner : MonoBehaviour
         return formattedTime;
     }
 
-    public void AddMessages(int amount)
+    public void AddMessages(int amount, float imageRate, float bannableRate)
     {
         for (int i = 0; i < amount; ++i)
         {
             User u = userData.GetUser();
-            if (Random.value < 0.1f)
-                AddMessage(u, userData.GetImageMessage(u.type));
+            bool bannable = Random.value < bannableRate || 
+                Random.value < player.factionBannableBonusRate[(int)u.type] || 
+                lastBannableMessage >= maximumConsecutiveNormalMessages;
+            if (Random.value < imageRate)
+                AddMessage(u, bannable ? userData.GetBannableImageMessage(u.type) : userData.GetImageMessage(u.type), bannable);
             else
-                AddMessage(u, userData.GetMessage(u.type));
-        }
-    }
-
-    public void AddBannableMessages(int amount)
-    {
-        for (int i = 0; i < amount; ++i)
-        {
-            User u = userData.GetUser();
-            if (Random.value < 0.1f)
-                AddMessage(u, userData.GetBannableImageMessage(u.type), true);
-            else
-                AddMessage(u, userData.GetBannableMessage(u.type), true);
+                AddMessage(u, bannable ? userData.GetBannableMessage(u.type) : userData.GetMessage(u.type), bannable);
+            
+            lastBannableMessage = (bannable) ? 0 : lastBannableMessage + 1;
         }
     }
 
@@ -176,6 +194,9 @@ public class MessageSpawner : MonoBehaviour
             bool bannable = clickedMessage.bannable;
 
             User user = clickedMessage.user;
+
+            if (bannable)
+                player.AddBanMoney(user.type);
 
             if (lastMessage && lastMessage.user.guid == user.guid)
                 lastMessage = null;
@@ -189,9 +210,6 @@ public class MessageSpawner : MonoBehaviour
                 }
             }
 
-            print(bannable);
-            if (bannable)
-                player.AddMoney(1);
 
             userData.RemoveUser(user);
 

@@ -11,6 +11,7 @@ public class MessageCreator : MonoBehaviour
     public TMP_Text textBox;
     public SpriteRenderer image;
     public TMP_Text timeStamp;
+    public SpriteRenderer banHighlight;
     public BoxCollider2D hitbox;
 
     [HideInInspector] public float height;
@@ -18,11 +19,12 @@ public class MessageCreator : MonoBehaviour
     public float addHeight;
     public float maxImageHeight;
 
+    [HideInInspector] static public bool visibleBanUpgrade = false;
+
     [HideInInspector] public User user;
     [HideInInspector] public bool bannable;
 
     private static DefaultInputActions input;
-
 
     void Start()
     {
@@ -45,7 +47,11 @@ public class MessageCreator : MonoBehaviour
 
         hitbox.enabled = true;
         hitbox.size = new Vector2(hitbox.size.x, height * 2.0f);
-        hitbox.offset = new Vector2(hitbox.offset.x, addHeight - height);
+        hitbox.offset = new Vector2(hitbox.offset.x, addHeight - height + addHeight / 2.0f);
+
+        banHighlight.enabled = (visibleBanUpgrade) ? bannable : false;
+        banHighlight.size = hitbox.size;
+        banHighlight.transform.localPosition = hitbox.offset;
     }
 
     public void Create(User user, string message, string timestamp, bool bannable = false)
@@ -93,6 +99,7 @@ public class MessageCreator : MonoBehaviour
         this.icon.sprite = invalid.userIcon;
         this.username.text = invalid.username;
         this.username.color = invalid.userColor;
+        this.bannable = false;
 
         if (icon)
             this.icon.size = icon.bounds.size / (Mathf.Min(icon.bounds.size.x, icon.bounds.size.y));
@@ -102,6 +109,7 @@ public class MessageCreator : MonoBehaviour
         textBox.text = "[removed]";
 
         hitbox.enabled = false;
+        banHighlight.enabled = false;
     }
 
     public void OnMouseOver()
@@ -110,5 +118,15 @@ public class MessageCreator : MonoBehaviour
         {
             transform.parent.GetComponent<MessageSpawner>().OnRightClick(icon.sprite, username.color, user.username, this);
         }
+    }
+
+    public void RefreshBanVision()
+    {
+        banHighlight.enabled = (visibleBanUpgrade) ? bannable : false;
+    }
+
+    public static void UnlockVisibleBanMessages()
+    {
+        visibleBanUpgrade = true;
     }
 }
