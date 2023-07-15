@@ -12,7 +12,7 @@ public class MomDistraction : MonoBehaviour
     public Transform moveBoxes;
 
     public Transform stuckPosition;
-    public SpriteRenderer door;
+    public GameObject mom;
 
     private float time;
     private float intervalTime;
@@ -22,7 +22,7 @@ public class MomDistraction : MonoBehaviour
     void Start()
     {
         intervalTime = interval + Random.Range(-intervalVariance, intervalVariance);
-        door.color = Color.clear;
+        mom.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,7 +47,7 @@ public class MomDistraction : MonoBehaviour
         stuck = true;
         time = 0.0f;
 
-        door.color = Color.white;
+        mom.SetActive(true);
 
         cam.GetStuck();
 
@@ -58,15 +58,18 @@ public class MomDistraction : MonoBehaviour
 
     public void ExitStuck()
     {
-        stuck = false;
-        time = 0.0f;
+        if (stuck)
+        {
+            stuck = false;
+            time = 0.0f;
 
-        door.color = Color.clear;
+            mom.SetActive(false);
 
-        cam.Unstuck();
+            cam.Unstuck();
 
-        moveBoxes.gameObject.SetActive(true);
+            moveBoxes.gameObject.SetActive(true);
 
-        intervalTime = interval + Random.Range(-intervalVariance, intervalVariance);
+            intervalTime = interval + Random.Range(-intervalVariance, intervalVariance);
+        }
     }
 }

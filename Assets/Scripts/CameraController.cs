@@ -22,6 +22,10 @@ public class CameraController : MonoBehaviour
     public float tabletViewSize;
     public float timeZoomTablet;
 
+    public GameObject onZoom;
+    public GameObject onUnZoom;
+
+
     private float currentViewSize;
     private Vector3 normalPosition;
     private bool isZoomed = false;
@@ -89,7 +93,7 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    public void OnCancel(InputAction.CallbackContext context)
+    public void OnCancel()
     {
         if (isZoomed && !isZooming && !isStuck)
         {
@@ -134,6 +138,16 @@ public class CameraController : MonoBehaviour
         isStuck = false;
     }
 
+    public void AddZoomGameObject(GameObject d)
+    {
+        onZoom = d;
+    }
+
+    public void AddUnZoomGameObject(GameObject d)
+    {
+        onUnZoom = d;
+    }
+
     IEnumerator objectZoom(Transform obj, float viewSize)
     {
         float time = 0.0f;
@@ -150,13 +164,16 @@ public class CameraController : MonoBehaviour
         
         cam.m_Lens.OrthographicSize = viewSize;
 
+        if (onZoom != null) onZoom.SetActive(true);
+        onZoom = null;
+
         currentViewSize = viewSize;
 
         isZooming = false;
         isZoomed = true;
     }
 
-    IEnumerator unZoom()
+    public IEnumerator unZoom()
     {
         float time = 0.0f;
         followObject.localPosition = new Vector3(normalPosition.x, normalPosition.y, z);
@@ -171,9 +188,23 @@ public class CameraController : MonoBehaviour
         
         cam.m_Lens.OrthographicSize = normalViewSize;
 
+        if (onUnZoom != null) onUnZoom.SetActive(false);
+        onUnZoom = null;
+
         zoomButton.SetActive(true);
         currentViewSize = normalViewSize;
 
         isZooming = false;
+    }
+
+    public IEnumerator FinishingUnZoom()
+    {
+        if (isZoomed && !isZooming && !isStuck)
+        {
+            isZoomed = false;
+            isZooming = true;
+
+            yield return StartCoroutine(unZoom());
+        }
     }
 }

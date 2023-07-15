@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Fade : MonoBehaviour
 {
     public float fadeTime = 0.25f;
-    void Start()
+    void Awake()
     {
         StartCoroutine(FadeScreen(1.0f, 0.0f));
     }
@@ -27,6 +27,10 @@ public class Fade : MonoBehaviour
         from.a = f;
         to.a = t;
 
+        fade.color = from;
+        
+        yield return new WaitForSeconds(0.1f);
+
         while (time < fadeTime)
         {
             fade.color = Color.Lerp(from, to, time / fadeTime);
@@ -36,6 +40,8 @@ public class Fade : MonoBehaviour
         }
 
         fade.color = to;
+        
+        yield return new WaitForSeconds(0.1f);
 
         if (!sceneName.Equals(""))
             SceneManager.LoadScene(sceneName);

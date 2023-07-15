@@ -164,7 +164,7 @@ public class MessageSpawner : MonoBehaviour
         if (newMessage != null) newMessage(lastMessage);
     }
 
-    string GetTime()
+    static public string GetTime()
     {
         const int timescale = 2;
         int time = (int)((Time.fixedTime + 17*60*timescale) % (1440 * timescale) / timescale);
