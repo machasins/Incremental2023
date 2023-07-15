@@ -10,14 +10,19 @@ public class Purchaseable : MonoBehaviour
     public float increaseMult;
     public PlayerData player;
     public TMP_Text label;
+    public TMP_Text stock;
     public Color unaffordableColor;
 
     private WorldButton button;
     private Color affordableColor;
 
+    private int amountTotal;
+
     void Start()
     {
         button = GetComponent<WorldButton>();
+
+        amountTotal = amount;
 
         if (button) button.Disable(player.GetMoney() < price);
         if (label) affordableColor = label.color;
@@ -43,6 +48,10 @@ public class Purchaseable : MonoBehaviour
         {
             label.text = (amount > 0) ? "$ " + price.ToString("F2") : "SOLD OUT";
             label.color = (player.GetMoney() >= price) ? affordableColor : unaffordableColor;
+        }
+        if (stock)
+        {
+            stock.text = (amountTotal > 1 && amount > 0) ? amount + " in stock" : "";
         }
     }
 }

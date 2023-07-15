@@ -123,7 +123,7 @@ public class MessageCreator : MonoBehaviour
     {
         if (input != null && input.UI.RightClick.WasPressedThisFrame())
         {
-            transform.parent.GetComponent<MessageSpawner>().OnRightClick(icon.sprite, username.color, user.username, this);
+            transform.parent.GetComponent<MessageSpawner>().OnRightClick(user, this);
         }
     }
 

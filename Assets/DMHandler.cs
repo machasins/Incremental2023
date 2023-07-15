@@ -26,6 +26,7 @@ public class DMHandler : MonoBehaviour
         dmSender.userIcon = senderIcon;
         dmSender.userColor = senderColor;
         dmSender.username = senderUsername;
+        dmSender.canBan = false;
     }
 
     // Update is called once per frame

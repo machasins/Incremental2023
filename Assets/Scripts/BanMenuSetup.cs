@@ -39,15 +39,17 @@ public class BanMenuSetup : MonoBehaviour
         mouseHovered = false;
     }
 
-    public void Create(Vector3 position, Sprite icon, Color userColor, string username, MessageSpawner caller)
+    public void Create(Vector3 position, User user, MessageSpawner caller)
     {
-        this.icon.sprite = icon;
+        banButton.gameObject.SetActive(user.canBan);
 
-        if (icon)
-            this.icon.size = icon.bounds.size / (Mathf.Min(icon.bounds.size.x, icon.bounds.size.y));
+        this.icon.sprite = user.userIcon;
 
-        this.username.text = username;
-        this.username.color = userColor;
+        if (user.userIcon)
+            this.icon.size = user.userIcon.bounds.size / (Mathf.Min(user.userIcon.bounds.size.x, user.userIcon.bounds.size.y));
+
+        this.username.text = user.username;
+        this.username.color = user.userColor;
 
         if (position.x + widthBounds.y > limitX.y)
             transform.localPosition -= Vector3.right * widthBounds.y;

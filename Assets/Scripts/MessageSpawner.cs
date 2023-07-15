@@ -76,7 +76,7 @@ public class MessageSpawner : MonoBehaviour
         }
     }
 
-    public void OnRightClick(Sprite icon, Color userColor, string username, MessageCreator message)
+    public void OnRightClick(User user, MessageCreator message)
     {
         rightClickMenu.SetActive(true);
 
@@ -86,7 +86,7 @@ public class MessageSpawner : MonoBehaviour
         mousePos.z = rightClickMenu.transform.localPosition.z;
         rightClickMenu.transform.localPosition = mousePos;
 
-        rightClickMenu.GetComponent<BanMenuSetup>().Create(rightClickMenu.transform.localPosition, icon, userColor, username, this);
+        rightClickMenu.GetComponent<BanMenuSetup>().Create(rightClickMenu.transform.localPosition, user, this);
 
         clickedMessage = message;
     }
@@ -160,7 +160,7 @@ public class MessageSpawner : MonoBehaviour
 
         if (!isScrolling)
             transform.localPosition = startingPosition + Vector3.up * totalHeight;
-            
+
         if (newMessage != null) newMessage(lastMessage);
     }
 
@@ -200,24 +200,25 @@ public class MessageSpawner : MonoBehaviour
             bool bannable = clickedMessage.bannable;
 
             User user = clickedMessage.user;
-
-            if (bannable)
-                player.AddBanMoney(user.type);
-
-            if (lastMessage && lastMessage.user.guid == user.guid)
-                lastMessage = null;
-
-            foreach (MessageCreator m in messagePool)
+            if (user.canBan)
             {
-                if (m.gameObject.activeInHierarchy && m.user.guid == user.guid)
+                if (bannable)
+                    player.AddBanMoney(user.type);
+
+                if (lastMessage && lastMessage.user.guid == user.guid)
+                    lastMessage = null;
+
+                foreach (MessageCreator m in messagePool)
                 {
-                    bannable |= m.bannable;
-                    m.DisplayBanned(userData.invalidUser);
+                    if (m.gameObject.activeInHierarchy && m.user.guid == user.guid)
+                    {
+                        bannable |= m.bannable;
+                        m.DisplayBanned(userData.invalidUser);
+                    }
                 }
+
+                userData.RemoveUser(user);
             }
-
-
-            userData.RemoveUser(user);
 
             clickedMessage = null;
         }

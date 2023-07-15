@@ -11,24 +11,26 @@ public class WorldButton : MonoBehaviour
     public InputActionReference keyPress;
 
     public SpriteRenderer sprite;
-    public Color disabledColor;
+    public Color disabledColor = Color.gray;
+    public Color hoveredColor = Color.blue;
+    public Color pressedColor = Color.white;
 
     [HideInInspector] public bool mouseHovered = false;
     [HideInInspector] public bool disabled = false;
 
-    private Color enabledColor;
+    private Color normalColor;
 
     void Start()
     {
         if (sprite)
-            enabledColor = sprite.color;
+            normalColor = sprite.color;
     }
 
     public void Disable(bool newValue)
     {
         disabled = newValue;
         if (sprite)
-            sprite.color = (disabled) ? disabledColor : enabledColor;
+            sprite.color = (disabled) ? disabledColor : normalColor;
     }
 
     void OnDisable()
@@ -39,12 +41,20 @@ public class WorldButton : MonoBehaviour
     void OnMouseOver()
     {
         mouseHovered = true;
+        if (sprite && !disabled)
+            sprite.color = hoveredColor;
         if(keyPress.ToInputAction().WasPressedThisFrame() && !disabled)
+        {
+            if (sprite)
+                sprite.color = pressedColor;
             action.Invoke();
+        }
     }
 
     void OnMouseExit()
     {
         mouseHovered = false;
+        if (sprite && !disabled)
+            sprite.color = normalColor;
     }
 }
