@@ -66,6 +66,14 @@ public class StreamController : MonoBehaviour
         }
     }
 
+    public void SetActive(bool active)
+    {
+        if (active)
+            OnEnable();
+        else
+            OnDisable();
+    }
+
     void OnEnable()
     {
         videos[0].GetComponent<SpriteRenderer>().enabled = true;
@@ -81,7 +89,6 @@ public class StreamController : MonoBehaviour
             if (v)
             {
                 v.Pause();
-                v.frame = 0;
 
                 v.GetComponent<SpriteRenderer>().enabled = false;
             }

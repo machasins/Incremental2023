@@ -4,29 +4,36 @@ using UnityEngine;
 
 public class TwitchCoordinator : MonoBehaviour
 {
-    public enum State
-    {
-        girl,
-        guy,
-        wait
-    }
-
     public ServerHandler server;
+
+    public GameObject normalParent;
+    public GameObject miniParent;
+
     public GameObject girlStream;
+    public GameObject girlOfflineScreen;
+    public GameObject[] girlAuxiliary;
     public GameObject guyStream;
-    public GameObject waitingScreen;
-    public float girlStreamChance;
+    public GameObject guyOfflineScreen;
+    public GameObject[] guyAuxiliary;
+    
     public float girlStreamTime;
     public float girlStreamTimeVariance;
+    public float girlOfflineTime;
+    public float girlOfflineTimeVariance;
     public float guyStreamTime;
     public float guyStreamTimeVariance;
-    public float waitingTime;
-    public float waitingTimeVariance;
+    public float guyOfflineTime;
+    public float guyOfflineTimeVariance;
 
-    [HideInInspector] public State state;
-    private float currentTime = 0.0f;
+    [HideInInspector] public bool girlOnline;
+    [HideInInspector] public bool guyOnline;
+    [HideInInspector] public bool girlActive;
 
-    private float time = 0.0f;
+    private float currentGirlTime = 0.0f;
+    private float currentGuyTime = 0.0f;
+
+    private float girlTime = 0.0f;
+    private float guyTime = 0.0f;
 
     private float streamerMessageTimeMult;
     private float streamerUserTimeMult;
@@ -35,9 +42,13 @@ public class TwitchCoordinator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        girlStream.SetActive(true);
-        guyStream.SetActive(false);
-        waitingScreen.SetActive(false);
+        girlActive = true;
+
+        girlOnline = true;
+        GirlSetEnabled(girlOnline, girlActive);
+
+        guyOnline = false;
+        GuySetEnabled(guyOnline, !girlActive);
 
         streamerMessageTimeMult = 1.0f;
         streamerUserTimeMult = 1.0f;
@@ -47,72 +58,110 @@ public class TwitchCoordinator : MonoBehaviour
         server.streamerUserTimeMult = 1.0f;
         server.streamerBannableRateMult = 1.0f;
 
-        currentTime = girlStreamTime + Random.Range(-girlStreamTimeVariance, girlStreamTimeVariance);
+        currentGirlTime = girlStreamTime + Random.Range(-girlStreamTimeVariance, girlStreamTimeVariance);
+        currentGuyTime = Random.Range(girlStreamTime / 2.0f, girlStreamTime / 1.25f);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        time += Time.fixedDeltaTime;
-        if (time >= currentTime)
+        girlTime += Time.fixedDeltaTime;
+        if (girlTime >= currentGirlTime)
         {
-            time = 0.0f;
-            ChangeStates();
-        }
-    }
-
-    void ChangeStates()
-    {
-        if (state == State.girl || state == State.guy)
-        {
-            state = State.wait;
-
-            girlStream.SetActive(false);
-            guyStream.SetActive(false);
-            waitingScreen.SetActive(true);
-
-            server.streamerMessageTimeMult = 1.0f;
-            server.streamerUserTimeMult = 1.0f;
-            server.streamerBannableRateMult = 1.0f;
-
-            currentTime = waitingTime + Random.Range(-waitingTimeVariance, waitingTimeVariance);
-        }
-        else if (state == State.wait)
-        {
-            waitingScreen.SetActive(false);
-            if (Random.value <= girlStreamChance)
+            girlTime = 0.0f;
+            if (girlOnline)
             {
-                state = State.girl;
+                girlOnline = false;
 
-                girlStream.SetActive(true);
-                guyStream.SetActive(false);
+                GirlSetEnabled(girlOnline, girlActive);
 
-                server.streamerMessageTimeMult = streamerMessageTimeMult;
-                server.streamerUserTimeMult = streamerUserTimeMult;
-                server.streamerBannableRateMult = 1.0f;
+                server.streamerMessageTimeMult = 1.0f;
+                server.streamerUserTimeMult = 1.0f;
 
-                currentTime = girlStreamTime + Random.Range(-girlStreamTimeVariance, girlStreamTimeVariance);
+                currentGirlTime = girlOfflineTime + Random.Range(-girlOfflineTimeVariance, girlOfflineTimeVariance);
             }
             else
             {
-                state = State.guy;
-
-                girlStream.SetActive(false);
-                guyStream.SetActive(true);
+                girlOnline = true;
                 
-                server.streamerMessageTimeMult = 1.0f;
-                server.streamerUserTimeMult = 1.0f;
-                server.streamerBannableRateMult = streamerBannableRateMult;
+                GirlSetEnabled(girlOnline, girlActive);
 
-                currentTime = guyStreamTime + Random.Range(-guyStreamTimeVariance, guyStreamTimeVariance);
+                server.streamerMessageTimeMult = streamerMessageTimeMult;
+                server.streamerUserTimeMult = streamerUserTimeMult;
+
+                currentGirlTime = girlStreamTime + Random.Range(-girlStreamTimeVariance, girlStreamTimeVariance);
             }
         }
+
+        guyTime += Time.fixedDeltaTime;
+        if (guyTime >= currentGuyTime)
+        {
+            guyTime = 0.0f;
+            if (guyOnline)
+            {
+                guyOnline = false;
+                
+                GuySetEnabled(guyOnline, !girlActive);
+
+                server.streamerBannableRateMult = 1.0f;
+
+                currentGuyTime = guyOfflineTime + Random.Range(-guyOfflineTimeVariance, guyOfflineTimeVariance);
+            }
+            else
+            {
+                guyOnline = true;
+                
+                GuySetEnabled(guyOnline, !girlActive);
+
+                server.streamerBannableRateMult = streamerBannableRateMult;
+
+                currentGuyTime = guyStreamTime + Random.Range(-guyStreamTimeVariance, guyStreamTimeVariance);
+            }
+        }
+    }
+
+    void GirlSetEnabled(bool isOnline, bool isActive)
+    {
+        if (!isActive && girlStream.transform.parent.parent != miniParent.transform)
+            girlStream.transform.parent.SetParent(miniParent.transform, false);
+        else if (isActive && girlStream.transform.parent.parent != normalParent.transform)
+            girlStream.transform.parent.SetParent(normalParent.transform, false);
+
+        girlStream.GetComponent<StreamController>().SetActive(isOnline);
+        girlOfflineScreen.SetActive(!isOnline);
+        
+        foreach(GameObject g in girlAuxiliary)
+            g.SetActive(isOnline && isActive);
+    }
+
+    void GuySetEnabled(bool isOnline, bool isActive)
+    {
+        if (!isActive && guyStream.transform.parent.parent != miniParent.transform)
+            guyStream.transform.parent.SetParent(miniParent.transform, false);
+        else if (isActive && guyStream.transform.parent.parent != normalParent.transform)
+            guyStream.transform.parent.SetParent(normalParent.transform, false);
+
+        guyStream.GetComponent<StreamController>().SetActive(isOnline);
+        guyOfflineScreen.SetActive(!isOnline);
+        
+        foreach(GameObject g in guyAuxiliary)
+            g.SetActive(isOnline && isActive);
+    }
+
+    public void SwitchStreams()
+    {
+        girlActive = !girlActive;
+        GirlSetEnabled(girlOnline, girlActive);
+        GuySetEnabled(guyOnline, !girlActive);
     }
 
     public void ImproveWaitingTime(float amount)
     {
-        waitingTime *= amount;
-        waitingTimeVariance *= amount;
+        girlOfflineTime *= amount;
+        girlOfflineTimeVariance *= amount;
+
+        guyOfflineTime *= amount;
+        guyOfflineTimeVariance *= amount;
     }
 
     public void ImproveGirlStreamTime(float amount)

@@ -130,6 +130,9 @@ public class MemberList : MonoBehaviour
         {
             User replacement = leftoverUsers.Find((User u) => u.status != User.Status.offline);
 
+            if (replacement == null)
+                replacement = leftoverUsers[0];
+
             m.Create(replacement);
             leftoverUsers.Remove(replacement);
         }

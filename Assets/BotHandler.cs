@@ -41,7 +41,7 @@ public class BotHandler : MonoBehaviour
             }
         }
 
-        if (viewBots > 0 && stream.state == TwitchCoordinator.State.girl)
+        if (viewBots > 0 && stream.girlOnline)
         {
             viewTime += Time.fixedDeltaTime;
             if (viewTime >= viewBotTime)
