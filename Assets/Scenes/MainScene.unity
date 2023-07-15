@@ -13119,7 +13119,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2139552479}
   - component: {fileID: 2139552480}
-  - component: {fileID: 2139552481}
   m_Layer: 0
   m_Name: Members
   m_TagString: Untagged
@@ -13163,17 +13162,6 @@ MonoBehaviour:
   maxAmountShown: 30
   userPrefab: {fileID: 5936709494931219027, guid: 8670323c629a0524398ae7a3e47f77a7, type: 3}
   memberLength: 0.4
---- !u!210 &2139552481
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139552478}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
 --- !u!1001 &1863305575119568347
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -31,6 +31,9 @@ public class ServerSwitcher : MonoBehaviour
 
     void FixedUpdate()
     {
+        girlNotifNum = girlServer.gameObject.activeInHierarchy ? 0 : girlNotifNum;
+        dmNotifNum = dmServer.gameObject.activeInHierarchy ? 0 : dmNotifNum;
+
         girlNotif.transform.parent.gameObject.SetActive(girlNotifNum > 0);
         dmNotif.transform.parent.gameObject.SetActive(dmNotifNum > 0);
 
