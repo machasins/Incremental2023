@@ -31,6 +31,8 @@ public class CameraController : MonoBehaviour
 
     private bool isMoving = false;
     private int moveDirection = 0;
+
+    private bool isStuck = false;
     
     void Start()
     {
@@ -59,7 +61,7 @@ public class CameraController : MonoBehaviour
 
     public void ZoomToComputer(GameObject button)
     {
-        if (!isZooming)
+        if (!isZooming && !isStuck)
         {
             isZooming = true;
 
@@ -74,7 +76,7 @@ public class CameraController : MonoBehaviour
 
     public void ZoomToTablet(GameObject button)
     {
-        if (!isZooming)
+        if (!isZooming && !isStuck)
         {
             isZooming = true;
             
@@ -89,7 +91,7 @@ public class CameraController : MonoBehaviour
 
     public void OnCancel(InputAction.CallbackContext context)
     {
-        if (isZoomed && !isZooming)
+        if (isZoomed && !isZooming && !isStuck)
         {
             isZoomed = false;
             isZooming = true;
@@ -100,7 +102,7 @@ public class CameraController : MonoBehaviour
 
     public void MoveCamera(int direction)
     {
-        if (!isZoomed & !isZooming)
+        if (!isZoomed && !isZooming && !isStuck)
         {
             moveDirection = direction;
             isMoving = true;
@@ -110,6 +112,26 @@ public class CameraController : MonoBehaviour
     public void StopCamera()
     {
         isMoving = false;
+    }
+
+    public void GetStuck()
+    {
+        isStuck = true;
+
+        isMoving = false;
+
+        if (isZoomed)
+        {
+            isZoomed = false;
+            isZooming = true;
+
+            StartCoroutine(unZoom());
+        }
+    }
+    
+    public void Unstuck()
+    {
+        isStuck = false;
     }
 
     IEnumerator objectZoom(Transform obj, float viewSize)
