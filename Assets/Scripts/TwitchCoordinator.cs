@@ -12,6 +12,7 @@ public class TwitchCoordinator : MonoBehaviour
     public GameObject girlStream;
     public GameObject girlOfflineScreen;
     public GameObject[] girlAuxiliary;
+    public GameObject donateButton;
     public GameObject guyStream;
     public GameObject guyOfflineScreen;
     public GameObject[] guyAuxiliary;
@@ -131,7 +132,9 @@ public class TwitchCoordinator : MonoBehaviour
         girlOfflineScreen.SetActive(!isOnline);
         
         foreach(GameObject g in girlAuxiliary)
-            g.SetActive(isOnline && isActive);
+            g.SetActive(isOnline);
+        
+        donateButton.SetActive(isOnline && isActive);
     }
 
     void GuySetEnabled(bool isOnline, bool isActive)
@@ -145,7 +148,7 @@ public class TwitchCoordinator : MonoBehaviour
         guyOfflineScreen.SetActive(!isOnline);
         
         foreach(GameObject g in guyAuxiliary)
-            g.SetActive(isOnline && isActive);
+            g.SetActive(isOnline);
     }
 
     public void SwitchStreams()

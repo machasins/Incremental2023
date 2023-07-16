@@ -7,6 +7,7 @@ public class HypeMeter : MonoBehaviour
     public PlayerData player;
     public StreamController stream;
     public SpriteRenderer bar;
+    public Animator heart;
 
     public float passiveIncomeAmount;
     public float passiveIncomeTime;
@@ -15,6 +16,7 @@ public class HypeMeter : MonoBehaviour
     public float interactAmount;
     public float decayRate;
     public float maxScale;
+    public Vector2 heartRate;
 
     private Color normalColor;
     private float minAmount;
@@ -26,6 +28,7 @@ public class HypeMeter : MonoBehaviour
     {
         minAmount = transform.localScale.y;
         normalColor = bar.color;
+        heart.speed = heartRate.x;
     }
 
     void OnEnable()
@@ -40,6 +43,8 @@ public class HypeMeter : MonoBehaviour
         amount = Mathf.Clamp(amount - decayRate * Time.fixedDeltaTime, minAmount, maxScale);
         transform.localScale = new Vector3(transform.localScale.x, amount, transform.localScale.z);
 
+        heart.speed = Mathf.Lerp(heartRate.x, heartRate.y, (amount - passiveIncomeThreshold) / (maxScale - passiveIncomeThreshold - 1f));
+
         if (amount > passiveIncomeThreshold)
         {
             time += Time.fixedDeltaTime;
@@ -50,10 +55,28 @@ public class HypeMeter : MonoBehaviour
             }
 
             stream.Interact();
-            bar.color = passiveIncomeColor;
+            StartCoroutine(LerpToColor(passiveIncomeColor));
         }
         else
-            bar.color = normalColor;
+            StartCoroutine(LerpToColor(normalColor));
+    }
+
+    IEnumerator LerpToColor(Color c)
+    {
+        float time = 0.0f;
+        Color from = bar.color;
+        if (from != c)
+        {
+            while(time < 0.5f)
+            {
+                bar.color = Color.Lerp(from, c, time / 0.5f);
+
+                time += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+
+            bar.color = c;
+        }
     }
 
     public void Interact()
