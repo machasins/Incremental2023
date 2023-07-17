@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.Networking;
 
 public class MainMenuVideoPlayer : MonoBehaviour
 {
+    public string initialVideoName;
+    public string clickVideoName;
     public GameObject firstFrame;
     public CanvasGroup MenuUI;
     public VideoPlayer initial;
@@ -19,13 +22,18 @@ public class MainMenuVideoPlayer : MonoBehaviour
 
     void Start()
     {
+        initial.url = System.IO.Path.Combine(Application.streamingAssetsPath, initialVideoName);
+        click.url = System.IO.Path.Combine(Application.streamingAssetsPath, clickVideoName);
+
         StartCoroutine(PreloadVideos());
     }
 
     IEnumerator PreloadVideos()
     {
-        initial.SetTargetAudioSource(0, null);
-        click.SetTargetAudioSource(0, null);
+        float volume = source.volume;
+        source.volume = 0;
+        //initial.SetTargetAudioSource(0, null);
+        //click.SetTargetAudioSource(0, null);
 
         initial.Play();
         click.Play();
@@ -35,8 +43,9 @@ public class MainMenuVideoPlayer : MonoBehaviour
         initial.Pause();
         click.Pause();
 
-        initial.SetTargetAudioSource(0, source);
-        click.SetTargetAudioSource(0, source);
+        //initial.SetTargetAudioSource(0, source);
+        //click.SetTargetAudioSource(0, source);
+        source.volume = volume;
 
         initial.frame = 0;
         click.frame = 0;

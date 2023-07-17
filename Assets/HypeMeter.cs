@@ -34,16 +34,16 @@ public class HypeMeter : MonoBehaviour
     void OnEnable()
     {
         amount = minAmount;
-        transform.localScale = new Vector3(transform.localScale.x, amount, transform.localScale.z);
+        transform.localScale = new Vector3(transform.localScale.x, Mathf.Lerp(minAmount, maxScale, amount), transform.localScale.z);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        amount = Mathf.Clamp(amount - decayRate * Time.fixedDeltaTime, minAmount, maxScale);
-        transform.localScale = new Vector3(transform.localScale.x, amount, transform.localScale.z);
+        amount = Mathf.Clamp01(amount - decayRate * Time.fixedDeltaTime);
+        transform.localScale = new Vector3(transform.localScale.x, Mathf.Lerp(minAmount, maxScale, amount), transform.localScale.z);
 
-        heart.speed = Mathf.Lerp(heartRate.x, heartRate.y, (amount - passiveIncomeThreshold) / (maxScale - passiveIncomeThreshold - 1f));
+        heart.speed = Mathf.Lerp(heartRate.x, heartRate.y, (amount - passiveIncomeThreshold) / (1.0f - passiveIncomeThreshold - .1f));
 
         if (amount > passiveIncomeThreshold)
         {
@@ -81,6 +81,6 @@ public class HypeMeter : MonoBehaviour
 
     public void Interact()
     {
-        amount = Mathf.Clamp(amount + interactAmount, minAmount, maxScale);
+        amount = Mathf.Clamp01(amount + interactAmount);
     }
 }

@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     public Transform followObject;
     public float moveSpeed;
     public Vector2 limitX;
+    public Vector2 limitY;
     public float normalViewSize;
     public float timeZoomNormal;
 
@@ -29,12 +30,12 @@ public class CameraController : MonoBehaviour
     private float currentViewSize;
     private Vector3 normalPosition;
     private bool isZoomed = false;
-    private bool isZooming = false;
+    [HideInInspector] public bool isZooming = false;
     private GameObject zoomButton;
     private float z;
 
     private bool isMoving = false;
-    private int moveDirection = 0;
+    private Vector2 moveDirection = Vector2.zero;
 
     private bool isStuck = false;
     
@@ -57,8 +58,8 @@ public class CameraController : MonoBehaviour
         if (isMoving)
         {
             Vector3 position = followObject.localPosition;
-            position += Vector3.right * moveDirection * moveSpeed * Time.deltaTime;
-            position = new Vector3(Mathf.Clamp(position.x, limitX.x, limitX.y), position.y, position.z);
+            position += (Vector3)moveDirection * moveSpeed * Time.deltaTime;
+            position = new Vector3(Mathf.Clamp(position.x, limitX.x, limitX.y), Mathf.Clamp(position.y, limitY.x, limitY.y), position.z);
             followObject.localPosition = position;
         }
     }
@@ -104,7 +105,7 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    public void MoveCamera(int direction)
+    public void MoveCamera(Vector2 direction)
     {
         if (!isZoomed && !isZooming && !isStuck)
         {
