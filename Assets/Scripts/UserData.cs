@@ -6,11 +6,10 @@ public class User
 {
     public enum Type
     {
-        normal,
-        furry,
         anime,
+        furry,
+        normal,
         kommando,
-        consumer,
         maxUserType
     };
 

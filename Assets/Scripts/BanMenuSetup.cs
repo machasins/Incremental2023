@@ -29,7 +29,6 @@ public class BanMenuSetup : MonoBehaviour
 
     void Update()
     {
-        print(mouseHovered + " " +  banButton.mouseHovered);
         if ((input.UI.Click.WasPressedThisFrame() && (!mouseHovered && !banButton.mouseHovered)) || input.UI.Cancel.WasPressedThisFrame())
             gameObject.SetActive(false);
     }
