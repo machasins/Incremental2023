@@ -25,8 +25,8 @@ public class ServerSwitcher : MonoBehaviour
         girlNotif.text = girlNotifNum.ToString();
         dmNotif.text = dmNotifNum.ToString();
 
-        girlServer.GetComponent<MessageSpawner>().newMessage += RecievedMessageGirl;
-        dmServer.GetComponent<MessageSpawner>().newMessage += RecievedMessageDM;
+        girlServer.GetComponentInChildren<MessageSpawner>().newMessage += RecievedMessageGirl;
+        dmServer.GetComponentInChildren<MessageSpawner>().newMessage += RecievedMessageDM;
     }
 
     void FixedUpdate()

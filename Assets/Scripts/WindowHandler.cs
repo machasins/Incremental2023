@@ -24,8 +24,8 @@ public class WindowHandler : MonoBehaviour
         discordSelected.SetActive(true);
         discordNotification.SetActive(false);
         
-        serverSwitcher.girlServer.GetComponent<MessageSpawner>().newMessage += OnRecieveMessage;
-        serverSwitcher.dmServer.GetComponent<MessageSpawner>().newMessage += OnRecieveMessage;
+        serverSwitcher.girlServer.GetComponentInChildren<MessageSpawner>().newMessage += OnRecieveMessage;
+        serverSwitcher.dmServer.GetComponentInChildren<MessageSpawner>().newMessage += OnRecieveMessage;
     }
 
     public void OnClickWebsite()

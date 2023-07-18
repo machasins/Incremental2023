@@ -44,16 +44,19 @@ public class MomDistraction : MonoBehaviour
 
     void EnterStuck()
     {
-        stuck = true;
-        time = 0.0f;
+        if (!cam.isZooming)
+        {
+            stuck = true;
+            time = 0.0f;
 
-        mom.SetActive(true);
+            mom.SetActive(true);
 
-        cam.GetStuck();
+            cam.GetStuck();
 
-        moveBoxes.gameObject.SetActive(false);
+            moveBoxes.gameObject.SetActive(false);
 
-        transform.localPosition = stuckPosition.localPosition;
+            transform.localPosition = stuckPosition.localPosition;
+        }
     }
 
     public void ExitStuck()
