@@ -71,24 +71,6 @@ AnimationClip:
       value: {fileID: 21300000, guid: efb38b59b47dcd7459c13b4b4a890be4, type: 3}
     - time: 2.0833333
       value: {fileID: 21300000, guid: 450fe65d7a3c0c040961345988f5ad74, type: 3}
-    - time: 2.1666667
-      value: {fileID: 21300000, guid: 2ae1e5b00fc1d5144ac9edad8800e62d, type: 3}
-    - time: 2.25
-      value: {fileID: 21300000, guid: 6a8712e3dbf0a2b47a95f51a6533fbfa, type: 3}
-    - time: 2.3333333
-      value: {fileID: 21300000, guid: 44a441e768f57e14383b64351b3f93c1, type: 3}
-    - time: 2.4166667
-      value: {fileID: 21300000, guid: 1c2bef949002c664eab7748ad14a4497, type: 3}
-    - time: 2.5
-      value: {fileID: 21300000, guid: 7b633090ac372a544aeb5444184ca4c5, type: 3}
-    - time: 2.5833333
-      value: {fileID: 21300000, guid: ffa848f96c1e51c49806f1fb8170d021, type: 3}
-    - time: 2.6666667
-      value: {fileID: 21300000, guid: 8ff226c6f653f0a4bb04845694f9274d, type: 3}
-    - time: 2.75
-      value: {fileID: 21300000, guid: c9c7e9339649d2444b2aa77b5a7004bb, type: 3}
-    - time: 2.8333333
-      value: {fileID: 21300000, guid: 025b3afdb95b22c4db1e9d4d2fb6d0a8, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -134,21 +116,12 @@ AnimationClip:
     - {fileID: 21300000, guid: 815ceb9c48c5ead42891cd1a1ab49b75, type: 3}
     - {fileID: 21300000, guid: efb38b59b47dcd7459c13b4b4a890be4, type: 3}
     - {fileID: 21300000, guid: 450fe65d7a3c0c040961345988f5ad74, type: 3}
-    - {fileID: 21300000, guid: 2ae1e5b00fc1d5144ac9edad8800e62d, type: 3}
-    - {fileID: 21300000, guid: 6a8712e3dbf0a2b47a95f51a6533fbfa, type: 3}
-    - {fileID: 21300000, guid: 44a441e768f57e14383b64351b3f93c1, type: 3}
-    - {fileID: 21300000, guid: 1c2bef949002c664eab7748ad14a4497, type: 3}
-    - {fileID: 21300000, guid: 7b633090ac372a544aeb5444184ca4c5, type: 3}
-    - {fileID: 21300000, guid: ffa848f96c1e51c49806f1fb8170d021, type: 3}
-    - {fileID: 21300000, guid: 8ff226c6f653f0a4bb04845694f9274d, type: 3}
-    - {fileID: 21300000, guid: c9c7e9339649d2444b2aa77b5a7004bb, type: 3}
-    - {fileID: 21300000, guid: 025b3afdb95b22c4db1e9d4d2fb6d0a8, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.9166667
+    m_StopTime: 2.1666665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -167,4 +140,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 2.0833333
+    functionName: DeactivateBool
+    data: triggered
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.0833333
+    functionName: ToggleGameObject
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

@@ -11,7 +11,6 @@ public class Purchaseable : MonoBehaviour
     public PlayerData player;
     public TMP_Text label;
     public TMP_Text stock;
-    public Color unaffordableColor;
 
     private WorldButton button;
     private Color affordableColor;
@@ -25,7 +24,6 @@ public class Purchaseable : MonoBehaviour
         amountTotal = amount;
 
         if (button) button.Disable(player.GetMoney() < price);
-        if (label) affordableColor = label.color;
     }
 
     public void Purchase()
@@ -43,15 +41,22 @@ public class Purchaseable : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (button) button.Disable(player.GetMoney() < price);
+        if (button) button.Disable(player ? player.GetMoney() < price : false);
+
+        UpdateData();
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        amountTotal = amount;
+        UpdateData();
+    }
+
+    void UpdateData()
+    {
         if (label) 
-        {
-            label.text = (amount > 0) ? "$ " + price.ToString("F2") : "SOLD OUT";
-            label.color = (player.GetMoney() >= price) ? affordableColor : unaffordableColor;
-        }
+            label.text = (amount > 0) ? "$" + price.ToString("F2") : "SOLD OUT";
         if (stock)
-        {
             stock.text = (amountTotal > 1 && amount > 0) ? amount + " in stock" : "";
-        }
     }
 }

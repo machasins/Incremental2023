@@ -86,7 +86,7 @@ public class MessageSpawner : MonoBehaviour
         mousePos.z = rightClickMenu.transform.localPosition.z;
         rightClickMenu.transform.localPosition = mousePos;
 
-        rightClickMenu.GetComponent<BanMenuSetup>().Create(rightClickMenu.transform.localPosition, user, this);
+        rightClickMenu.GetComponent<BanMenuSetup>().Create(rightClickMenu.transform.localPosition, user, message.bannable, this);
 
         clickedMessage = message;
     }

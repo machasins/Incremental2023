@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimatorOptions : MonoBehaviour
 {
+    public GameObject triggerGameobject;
     Animator anim;
 
     void Start()
@@ -19,5 +20,10 @@ public class AnimatorOptions : MonoBehaviour
     void DeactivateBool(string param)
     {
         anim.SetBool(param, false);
+    }
+
+    public void ToggleGameObject(int active)
+    {
+        triggerGameobject.SetActive(active > 0);
     }
 }

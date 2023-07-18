@@ -18,7 +18,7 @@ public class CameraMove : MonoBehaviour
 
         if (distance > deadZoneRadius)
         {
-            float adjustedSpeed = Mathf.Lerp(1.0f, speed, (distance - deadZoneRadius) / (maximumRadius - deadZoneRadius));
+            float adjustedSpeed = Mathf.Lerp(0.0f, speed, (distance - deadZoneRadius) / (maximumRadius - deadZoneRadius));
             cam.MoveCamera((pos - new Vector2(0.5f, 0.5f)).normalized * adjustedSpeed);
         }
         else
