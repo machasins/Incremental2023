@@ -24,12 +24,14 @@ public class EquipHandler : MonoBehaviour
 
     public Slot itemSlot;
     public Sprite slotSprite;
-    public SpriteRenderer slotRender;
     public GameObject equipButton;
 
     public delegate void Unequip();
     private Unequip removeAll;
     private WorldButton equipButtonMechanics;
+    private CollectibleHandler display;
+    private ConsumeHandler consume;
+    private SaleItemSetup sale;
 
     void Start()
     {
@@ -39,18 +41,26 @@ public class EquipHandler : MonoBehaviour
                 removeAll += e.UnequipItem;
         
         equipButtonMechanics = equipButton.GetComponent<WorldButton>();
+        display = FindFirstObjectByType<CollectibleHandler>();
+        consume = GetComponent<ConsumeHandler>();
+        sale = GetComponent<SaleItemSetup>();
     }
 
     public void EquipItem()
     {
-        equipButtonMechanics.Disable(false);
+        equipButtonMechanics.Disable(true);
 
         removeAll();
-        slotRender.sprite = slotSprite;
+        display.PlaceItem(itemSlot, slotSprite);
+
+        consume.consumeButton.SetActive(sale.purchase.amount > 0);
     }
 
     public void UnequipItem()
     {
-        equipButtonMechanics.Disable(true);
+        equipButtonMechanics.Disable(false);
+
+        if (consume.boughtOnce)
+            consume.consumeButton.SetActive(false);
     }
 }

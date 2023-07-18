@@ -11,6 +11,7 @@ public class SaleItemSetup : MonoBehaviour
     public string description;
     public float price;
     public int stock;
+    public bool startUnlocked;
 
     public PlayerData player;
     public SpriteRenderer itemRender;
@@ -44,6 +45,11 @@ public class SaleItemSetup : MonoBehaviour
             purchase.player = player;
             purchase.price = price;
             purchase.amount = stock;
+
+
+            purchase.OnDrawGizmosSelected();
         }
+
+        GetComponent<UnlockHandler>().InstantToggleLock(!startUnlocked);
     }
 }

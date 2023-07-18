@@ -13,7 +13,7 @@ public class ScrollHandler : MonoBehaviour
 
     public void OnScroll()
     {
-        transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(limitY.y, limitY.x, scrollbar.value));
+        transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(limitY.y, limitY.x, scrollbar.value), transform.localPosition.z);
     }
 
     void Update()

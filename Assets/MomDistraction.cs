@@ -66,7 +66,7 @@ public class MomDistraction : MonoBehaviour
             stuck = false;
             time = 0.0f;
 
-            mom.SetActive(false);
+            mom.GetComponent<Animator>().SetBool("closeDoor", true);
 
             cam.Unstuck();
 

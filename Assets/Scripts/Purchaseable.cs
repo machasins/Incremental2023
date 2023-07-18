@@ -46,7 +46,7 @@ public class Purchaseable : MonoBehaviour
         UpdateData();
     }
 
-    void OnDrawGizmosSelected()
+    public void OnDrawGizmosSelected()
     {
         amountTotal = amount;
         UpdateData();

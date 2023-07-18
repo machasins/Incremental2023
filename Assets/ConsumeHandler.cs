@@ -9,11 +9,15 @@ public class ConsumeHandler : MonoBehaviour
     public GameObject consumeButton;
 
     private EquipHandler equip;
+    private UnlockHandler unlock;
     private SaleItemSetup sale;
+
+    [HideInInspector] public bool boughtOnce = false;
 
     void Start()
     {
         equip = GetComponent<EquipHandler>();
+        unlock = GetComponent<UnlockHandler>();
         sale = GetComponent<SaleItemSetup>();
     }
 
@@ -21,8 +25,11 @@ public class ConsumeHandler : MonoBehaviour
     {
         if (sale.purchase.amount <= 0)
             consumeButton.SetActive(false);
+
+        boughtOnce = true;
             
         actions.Invoke();
         equip.EquipItem();
+        unlock.Purchase();
     }
 }
