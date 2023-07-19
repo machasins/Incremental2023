@@ -32,6 +32,7 @@ furPony
 ILOVEPONIES
 KittyKat
 FurChonker
+fluffypaws
 Foxy
 CrinklerFan
 Crinkler100
@@ -293,19 +294,25 @@ My Gun Is Printing
 Gun Printer
 Soldier
 Deployed
+Deploed
 Iminyourwalls
 MissleInbound
+Soldeir
 Defcon2
+wariar
 Defcon3
 DEFCON3
 defcon4
 FBI
 [NOTFBI]
 killer
+kiler
+sycho
 Wanted
 WANTED
 Ihatemystepdad
 dont_tread_on_me_STEPDAD
+StepmomHATER
 Defcon5
 BreathingWeapon
 IseeBlood
