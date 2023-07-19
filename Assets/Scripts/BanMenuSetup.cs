@@ -14,6 +14,7 @@ public class BanMenuSetup : MonoBehaviour
     public SpriteRenderer icon;
     public TMP_Text username;
     public SpriteRenderer role;
+    public SpriteRenderer background;
 
     public Sprite[] roles;
 
@@ -62,6 +63,7 @@ public class BanMenuSetup : MonoBehaviour
         this.username.text = user.username;
         this.username.color = user.userColor;
         this.role.sprite = roles[(int)user.type];
+        this.background.color = user.userColor;
 
         if (position.x + widthBounds.y > limitX.y)
             transform.localPosition += Vector3.left * widthBounds.y;
