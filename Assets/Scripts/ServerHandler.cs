@@ -10,7 +10,6 @@ public class ServerHandler : MonoBehaviour
     public float messageTimeVariation; // Varience of message rate
     public float banMessageRate; // Rate of bannable messages compared to non-bannable
 
-    public int maxMembers;
     public float secondsPerUser; // Rate that the population will increase
     public float newUserTimeVariation; // Varience of user rate
 
@@ -19,6 +18,7 @@ public class ServerHandler : MonoBehaviour
     [HideInInspector] public float streamerBannableRateMult;
 
     private UserData data;
+    private FollowerTracker follow;
 
     private float currentMessageTime = 0.0f;
     private float currentUserTime = 0.0f;
@@ -29,8 +29,9 @@ public class ServerHandler : MonoBehaviour
     void Start()
     {
         data = GetComponent<UserData>();
+        follow = FindFirstObjectByType<FollowerTracker>();
 
-        data.AddUser(maxMembers / 2);
+        data.AddUser((int)follow.amoFollowers);
         messages.AddMessages(10, 0.1f, 0.0f);
 
         currentMessageTime = secondsPerMessage + Random.Range(-messageTimeVariation, messageTimeVariation);
@@ -40,13 +41,13 @@ public class ServerHandler : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (data.users.Count < maxMembers)
+        if (data.users.Count < (int)follow.amoFollowers)
         {
             userTime += Time.fixedDeltaTime;
             if (userTime >= currentUserTime)
             {
                 userTime = 0.0f;
-                float memberMult = Mathf.Lerp(2.0f, 1.0f, maxMembers / 1000.0f) * streamerUserTimeMult;
+                float memberMult = Mathf.Lerp(2.0f, 1.0f, follow.amoFollowers / 1000.0f) * streamerUserTimeMult;
                 currentUserTime = (secondsPerUser + Random.Range(-newUserTimeVariation, newUserTimeVariation)) * memberMult;
                 data.AddUser();
             }
@@ -60,11 +61,6 @@ public class ServerHandler : MonoBehaviour
             currentMessageTime = (secondsPerMessage + Random.Range(-messageTimeVariation, messageTimeVariation)) * memberMult;
             messages.AddMessages(1, 0.1f, banMessageRate * streamerBannableRateMult);
         }
-    }
-
-    public void IncreaseUserCap(int amount)
-    {
-        maxMembers += amount;
     }
     
     public void IncreaseSecondsPerMessage(float amount)

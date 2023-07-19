@@ -10,22 +10,36 @@ public class WinCondition : MonoBehaviour
     public CameraController cam;
     public Fade fade;
     public string finalSceneName;
-    public GameObject inputBlocker;
+    public GameObject finalMessage;
+    public AudioClip finalSound;
     public int followerGoal;
+
+    private bool endingStarted = false;
 
     void Update()
     {
-        if (userData.users.Count >= followerGoal)
+        if (userData.users.Count >= followerGoal && !endingStarted)
         {
-            StartCoroutine(GameWon());
+            StartEnding();
+            endingStarted = true;
         }
+    }
+
+    void StartEnding()
+    {
+        mom.ExitStuck();
+        StartCoroutine(cam.objectZoom(cam.computer, cam.computerViewSize));
+        finalMessage.SetActive(true);
+    }
+
+    public void EndGame()
+    {
+        StartCoroutine(GameWon());
     }
 
     IEnumerator GameWon()
     {
-        inputBlocker.SetActive(true);
-
-        mom.ExitStuck();
+        cam.GetComponent<AudioSource>().PlayOneShot(finalSound);
 
         yield return StartCoroutine(cam.FinishingUnZoom());
 

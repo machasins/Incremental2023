@@ -24,6 +24,7 @@ public class HypeMeter : MonoBehaviour
     private float time = 0.0f;
     private MusicHandler music;
     private TwitchCoordinator twitch;
+    private FollowerTracker follow;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class HypeMeter : MonoBehaviour
 
         music = FindFirstObjectByType<MusicHandler>();
         twitch = FindFirstObjectByType<TwitchCoordinator>();
+        follow = FindFirstObjectByType<FollowerTracker>();
     }
 
     void OnEnable()
@@ -95,5 +97,7 @@ public class HypeMeter : MonoBehaviour
     public void Interact()
     {
         amount = Mathf.Clamp01(amount + interactAmount);
+
+        follow.AmoInteract(amount);
     }
 }
