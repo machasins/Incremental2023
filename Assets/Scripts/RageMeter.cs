@@ -27,6 +27,7 @@ public class RageMeter : MonoBehaviour
     private float skullTime = 0.0f;
     private MusicHandler music;
     private TwitchCoordinator twitch;
+    private FollowerTracker follow;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class RageMeter : MonoBehaviour
 
         music = FindFirstObjectByType<MusicHandler>();
         twitch = FindFirstObjectByType<TwitchCoordinator>();
+        follow = FindFirstObjectByType<FollowerTracker>();
     }
 
     void OnEnable()
@@ -123,5 +125,7 @@ public class RageMeter : MonoBehaviour
     public void Interact()
     {
         amount = Mathf.Clamp01(amount + interactAmount);
+
+        follow.TrainInteract(amount);
     }
 }

@@ -149,7 +149,7 @@ public class CameraController : MonoBehaviour
         onUnZoom = d;
     }
 
-    IEnumerator objectZoom(Transform obj, float viewSize)
+    public IEnumerator objectZoom(Transform obj, float viewSize)
     {
         float time = 0.0f;
         normalPosition = new Vector3(obj.localPosition.x, followObject.localPosition.y, z);

@@ -9,6 +9,11 @@ public class UnlockHandler : MonoBehaviour
 
     private bool isUnlocked;
 
+    void OnEnable()
+    {
+        InstantToggleLock(isUnlocked);
+    }
+
     public void Unlock()
     {
         if (!isUnlocked)

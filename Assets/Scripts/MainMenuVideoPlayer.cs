@@ -20,6 +20,8 @@ public class MainMenuVideoPlayer : MonoBehaviour
 
     public string sceneName;
 
+    private bool videoStarted = false;
+
     void Start()
     {
         initial.url = System.IO.Path.Combine(Application.streamingAssetsPath, initialVideoName);
@@ -53,6 +55,8 @@ public class MainMenuVideoPlayer : MonoBehaviour
 
     public void StartVideo()
     {
+        videoStarted = true;
+
         initial.loopPointReached += WaitForClick;
 
         firstFrame.SetActive(false);
@@ -107,10 +111,18 @@ public class MainMenuVideoPlayer : MonoBehaviour
 
     void FinishScene(VideoPlayer vp)
     {
-        MenuUI.alpha = 1.0f;
-        MenuUI.gameObject.SetActive(true);
-        mainMenu.SetActive(false);
+        FinishScene();
+    }
 
-        fade.SwitchScene(sceneName);
+    public void FinishScene()
+    {
+        if (videoStarted)
+        {
+            MenuUI.alpha = 1.0f;
+            MenuUI.gameObject.SetActive(true);
+            mainMenu.SetActive(false);
+
+            fade.SwitchScene(sceneName);
+        }
     }
 }

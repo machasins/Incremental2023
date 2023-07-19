@@ -23,6 +23,7 @@ public class MessageSpawner : MonoBehaviour
     [HideInInspector] public PingNewMessage newMessage;
 
     private BotHandler bots;
+    private FollowerTracker follow;
 
     private MessageCreator lastMessage;
     private int messageIndex = 0;
@@ -37,6 +38,7 @@ public class MessageSpawner : MonoBehaviour
     void Start()
     {
         bots = player.GetComponent<BotHandler>();
+        follow = FindFirstObjectByType<FollowerTracker>();
 
         startingPosition = transform.localPosition;
         rightClickMenu.SetActive(false);
@@ -108,6 +110,8 @@ public class MessageSpawner : MonoBehaviour
 
                 player.AddMoney(player.baseBanMoney * bots.cleanupBotPercentMoneyPerBan);
             }
+            else if (ret.bannable)
+                follow.AmoMissedBan();
         }
 
         ret.transform.localPosition = Vector3.zero;
@@ -202,9 +206,6 @@ public class MessageSpawner : MonoBehaviour
             User user = clickedMessage.user;
             if (user.canBan)
             {
-                if (bannable)
-                    player.AddBanMoney(user.type);
-
                 if (lastMessage && lastMessage.user.guid == user.guid)
                     lastMessage = null;
 
@@ -215,6 +216,12 @@ public class MessageSpawner : MonoBehaviour
                         bannable |= m.bannable;
                         m.DisplayBanned(userData.invalidUser);
                     }
+                }
+
+                if (bannable)
+                {
+                    player.AddBanMoney(user.type);
+                    follow.AmoStreakInc();
                 }
 
                 userData.RemoveUser(user);

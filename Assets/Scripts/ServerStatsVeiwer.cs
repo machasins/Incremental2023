@@ -5,12 +5,16 @@ using TMPro;
 
 public class ServerStatsVeiwer : MonoBehaviour
 {
-    public ServerHandler server;
-    public UserData data;
+    FollowerTracker follow;
     public TMP_Text serverPop;
+
+    void Start()
+    {
+        follow = FindFirstObjectByType<FollowerTracker>();
+    }
 
     void FixedUpdate()
     {
-        serverPop.text = data.users.Count + " / " + server.maxMembers + " members";
+        serverPop.text = follow.amoFollowers + " followers";
     }
 }

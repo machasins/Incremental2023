@@ -2168,11 +2168,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 58a83e91494542e418180695d0c0f44d, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -2183,8 +2183,45 @@ PrefabInstance:
       value: "FurFashun\u2122 Wearable Tail"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Complete your fur faced look with the tail you've always wanted. Increases
+        ban-worthy messages.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420040}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseBanMessageRate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ServerHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -2436,11 +2473,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 17cebb232ac135a42b13c08ad65c6942, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -2451,8 +2488,73 @@ PrefabInstance:
       value: "DoggyDog\u2122 Chew Toy"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Perfect for any dog breed. Increases the chances for furries to break
+        the rules.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeIncrementUserType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: IncreaseFactionBannableBonusRate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: furry
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -2627,7 +2729,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 2ce596e2eb659e0478b07768aeeb20bf, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 10.25
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -2642,8 +2744,45 @@ PrefabInstance:
       value: Ultra Rare in Box Jen FankoPulp
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Now THIS is a rare find. Until they find the landfill full of them.
+        Increase the money gained from banning people.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseBaseBanMoney
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -2777,7 +2916,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0f3406c0c08bac847aa628be22456898, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -2792,8 +2931,73 @@ PrefabInstance:
       value: '[GENUINE] AmorWrath Hair'
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Awaiting the day cloning technology is in your hands... Get more money
+        banning the streamer fans.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeIncrementUserType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: IncreaseFactionBanBonus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -3353,8 +3557,8 @@ RectTransform:
   m_Father: {fileID: 1438716959}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.9}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -0.000000010244548}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3674,7 +3878,8 @@ GameObject:
   m_Component:
   - component: {fileID: 394586211}
   - component: {fileID: 394586213}
-  - component: {fileID: 394586212}
+  - component: {fileID: 394586214}
+  - component: {fileID: 394586215}
   m_Layer: 0
   m_Name: Bar
   m_TagString: Untagged
@@ -3691,11 +3896,12 @@ RectTransform:
   m_GameObject: {fileID: 394586210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1097829146}
+  - {fileID: 1781443070}
   - {fileID: 2044254094}
+  - {fileID: 1097829146}
   m_Father: {fileID: 2056936605}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3704,36 +3910,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 474}
   m_SizeDelta: {x: 1000, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &394586212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394586210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &394586213
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3742,6 +3918,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394586210}
   m_CullTransparentMesh: 1
+--- !u!114 &394586214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394586210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b25c78875fd1be4694c3e93a50c5607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trainStartingFollowers: 100
+  trainGainRate: 0.25
+  trainInteractRate: 1
+  trainProtectPercent: 0.75
+  trainContinuePercent: 1.01
+  amoStartingFollowers: 20
+  amoGainRate: 0.2
+  amoInteractRate: 0.5
+  amoDonoGain: 50
+  amoBanLoss: 25
+  amoStreakMaxMult: 2.5
+  amoStreakMax: 15
+  amoStreakMaxTime: 30
+  trainFollowers: 0
+  amoFollowers: 0
+--- !u!114 &394586215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394586210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfad6c1418e8ee4f9148bc5f2a2ad74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amo: {fileID: 1097829146}
+  train: {fileID: 2044254094}
+  minPos: {x: -25, y: 0, z: 0}
+  maxPos: {x: 975, y: 0, z: 0}
+  maxFollowers: 1000
 --- !u!114 &399699927 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9080844524886255439, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
@@ -3890,7 +4110,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 333c27848af99d44cbfec7c185b122e0, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -3905,8 +4125,45 @@ PrefabInstance:
       value: "FurFashun\u2122 Paws (Blue)"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Fits just like a glove. Increases the chance of followers breaking the
+        rules.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420040}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseBanMessageRate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ServerHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -4044,7 +4301,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 641a32718d7839b488ce1c252e96e0e7, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -4059,8 +4316,73 @@ PrefabInstance:
       value: Lifesize Replica "Shatter Blade"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: The ultimate sword. Gain a massive bonus to banning the impure anime
+        fans. Purge the weakness.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeIncrementUserType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: IncreaseFactionBanBonus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: anime
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -4222,8 +4544,8 @@ MonoBehaviour:
   player: {fileID: 519420038}
   userData: {fileID: 519420039}
   messagePrefab: {fileID: 5936709494931219027, guid: 21c01c9f04732e848a8c817a98a83f06, type: 3}
-  messagePoolAmount: 100
-  maximumConsecutiveNormalMessages: 10
+  messagePoolAmount: 25
+  maximumConsecutiveNormalMessages: 15
   messagePool: []
   totalHeight: 0
 --- !u!4 &473824316
@@ -4437,7 +4759,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ceb3953abe05b0f46bb55976c462b6a7, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 99.99
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -4452,8 +4774,45 @@ PrefabInstance:
       value: "TrueComfort\u2122 Body Pillow"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Ultra comfort, ultra leisure. Gain a multiplier for every source of
+        income.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddMoneyMult
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -4640,8 +4999,9 @@ MonoBehaviour:
   mom: {fileID: 491864293}
   cam: {fileID: 519420036}
   fade: {fileID: 1430452151}
-  finalSceneName: MainMenu
-  inputBlocker: {fileID: 1312291000}
+  finalSceneName: Ending
+  finalMessage: {fileID: 1289393629}
+  finalSound: {fileID: 8300000, guid: 5c8de7e50ab8cf44b8dba774361ceded, type: 3}
   followerGoal: 1000
 --- !u!1 &501344468
 GameObject:
@@ -4978,8 +5338,7 @@ MonoBehaviour:
   secondsPerMessage: 1.5
   messageTimeVariation: 0.25
   banMessageRate: 0.1
-  maxMembers: 20
-  secondsPerUser: 3
+  secondsPerUser: 0.1
   newUserTimeVariation: 2
   streamerMessageTimeMult: 0
   streamerUserTimeMult: 0
@@ -5335,7 +5694,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 882bb1a3467978549adb4162d1e04ae3, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -5350,8 +5709,41 @@ PrefabInstance:
       value: Picture Frame
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: A picture to remind you why you're doing this. Ban-worthy messages will
+        have a red tint behind them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420040}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockVisibleBanMessages
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ServerHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -5896,7 +6288,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.15}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0.000000019557774}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6105,11 +6497,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ae5e96e3e64c3d449bbd68c1b146ef66, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -6120,8 +6512,41 @@ PrefabInstance:
       value: Hariken Figure (Limited Edition)
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Only 12 thousand of these were made. Probably. Get some passive income
+        as this becomes rarer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420041}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddBackgroundAutoMod
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BotHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -6410,6 +6835,163 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &669137006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 669137007}
+  - component: {fileID: 669137010}
+  - component: {fileID: 669137009}
+  - component: {fileID: 669137008}
+  m_Layer: 6
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &669137007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669137006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1670686976}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &669137008
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669137006}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: f8e0395daee3dd644af2efd8bff38210, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.53, y: 0.75}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &669137009
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669137006}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.53, y: 0.75}
+    newSize: {x: 1.53, y: 0.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &669137010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669137006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fe7dcb3888554408bf39274fee1f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1536159742}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1670686975}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  keyPress: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  render: {fileID: 0}
+  disabledSprite: {fileID: 0}
+  hoveredSprite: {fileID: 0}
+  mouseHovered: 0
+  disabled: 0
 --- !u!114 &671739917 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9080844524886255439, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
@@ -6449,8 +7031,45 @@ PrefabInstance:
       value: Schoolgirl Figurine
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: You're not sure what it's from, but she calls to you. Increase the frequency
+        of follower's messages.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420040}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseSecondsPerMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ServerHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -6953,7 +7572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &737395864
 Transform:
   m_ObjectHideFlags: 0
@@ -8136,6 +8755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 901444368}
+  - component: {fileID: 901444369}
   m_Layer: 0
   m_Name: Interact
   m_TagString: Untagged
@@ -8162,6 +8782,24 @@ Transform:
   m_Father: {fileID: 792007882}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &901444369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901444367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12e6f6670c013a40ad627999a56ba6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerGameobject: {fileID: 0}
+  randomSound:
+  - {fileID: 8300000, guid: a34fae2fa9b6c4345a664f4ab8f62d5e, type: 3}
+  - {fileID: 8300000, guid: e9f1138925e90794688a41428d1534dd, type: 3}
+  - {fileID: 8300000, guid: 0fb4533bf157d9846bcf4f569e003f44, type: 3}
+  volume: 0.025
 --- !u!1 &903096181
 GameObject:
   m_ObjectHideFlags: 0
@@ -8177,7 +8815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &903096182
 Transform:
   m_ObjectHideFlags: 0
@@ -8358,6 +8996,163 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738a9294187cc7a4ea702492b4b65c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &917407837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 917407838}
+  - component: {fileID: 917407841}
+  - component: {fileID: 917407840}
+  - component: {fileID: 917407839}
+  m_Layer: 6
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &917407838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917407837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1536159743}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &917407839
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917407837}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: f8e0395daee3dd644af2efd8bff38210, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.53, y: 0.75}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &917407840
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917407837}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.53, y: 0.75}
+    newSize: {x: 1.53, y: 0.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &917407841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917407837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fe7dcb3888554408bf39274fee1f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1039619590}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1536159742}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  keyPress: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  render: {fileID: 0}
+  disabledSprite: {fileID: 0}
+  hoveredSprite: {fileID: 0}
+  mouseHovered: 0
+  disabled: 0
 --- !u!1 &917738463
 GameObject:
   m_ObjectHideFlags: 0
@@ -8493,8 +9288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33594f8229a78d438929959f0062d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  server: {fileID: 519420040}
-  data: {fileID: 519420039}
   serverPop: {fileID: 926395966}
 --- !u!114 &926395966
 MonoBehaviour:
@@ -8643,11 +9436,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: fd5c7f9b857919047bdffb3972f80403, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -8658,8 +9451,41 @@ PrefabInstance:
       value: "AmorWrath\u2122 Mousepad"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Get some wrist support from your favorite streamer. More Passive income
+        when watching the stream.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420041}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddViewBot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BotHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -9292,11 +10118,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 060a7647680654240845015bf6ef1091, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -9307,8 +10133,73 @@ PrefabInstance:
       value: "Tatatime\u2122 Mascot Plushie"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: They turned it into a marketable plushie. Get a bit little more money
+        when banning Military nuts.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeIncrementUserType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: IncreaseFactionBanBonus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: kommando
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -9937,6 +10828,91 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 17.8, y: 10}
   m_EdgeRadius: 5
+--- !u!1 &1039619590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1039619591}
+  - component: {fileID: 1039619592}
+  m_Layer: 6
+  m_Name: Frame3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1039619591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039619590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1431134219}
+  m_Father: {fileID: 1289393630}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1039619592
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039619590}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b46d44400c776e647a7759dbd464fa92, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10.29, y: 7.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1050391605
 GameObject:
   m_ObjectHideFlags: 0
@@ -10382,11 +11358,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: eec3749c9f334ec4787df0a4e160e3f9, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -10397,8 +11373,73 @@ PrefabInstance:
       value: Photo Wallet
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Pictures included. Increase the money gained from banning rule-breaking
+        anime enthusiasts.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeIncrementUserType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: IncreaseFactionBanBonus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: anime
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -11113,17 +12154,17 @@ RectTransform:
   m_GameObject: {fileID: 1097829145}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 394586211}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -25, y: 0}
+  m_SizeDelta: {x: 300, y: 399}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1097829147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11144,7 +12185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a6aeb722d46c65548ae732dad02f4022, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11175,11 +12216,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: f9d186758ef555643b316817573a22e6, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -11190,8 +12231,45 @@ PrefabInstance:
       value: "AmorWrath\u2122 Stickers"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Collectible stickers for super fans like you! Followers will chat more
+        when you have this conversation starter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420040}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseSecondsPerMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ServerHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -11308,6 +12386,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8217273688126474039, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
   m_PrefabInstance: {fileID: 1108967448}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1123296584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123296585}
+  - component: {fileID: 1123296586}
+  m_Layer: 0
+  m_Name: InputBlocker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1123296585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123296584}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1029.3735, y: 1029.3735, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1289393630}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1123296586
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123296584}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1123663714
 GameObject:
   m_ObjectHideFlags: 0
@@ -12011,15 +13147,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 519420040}
-        m_TargetAssemblyTypeName: ServerHandler, Assembly-CSharp
-        m_MethodName: IncreaseUserCap
-        m_Mode: 3
+      - m_Target: {fileID: 394586214}
+        m_TargetAssemblyTypeName: FollowerTracker, Assembly-CSharp
+        m_MethodName: AmoDono
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 20
-          m_FloatArgument: 0.05
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -12120,11 +13256,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: aad880e178f6ba14c93a5641237f17f7, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -12135,8 +13271,45 @@ PrefabInstance:
       value: Bunnelby Plush
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: May of may not come to life and haunt your family diner. Inceases the
+        money gained by hating on Train.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseTrainInteractBonus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -12309,7 +13482,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: cef1890653480bf47821d2eceae8461a, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -12324,8 +13497,41 @@ PrefabInstance:
       value: Kokomi Lifesize Bust
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Yes, those are lifesize. Adds a chance to catch bans that you missed,
+        gaining some money.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420041}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddCleanupAutoMod
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BotHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -13017,6 +14223,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1268432334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1268432335}
+  - component: {fileID: 1268432336}
+  m_Layer: 6
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1268432335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268432334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1289393630}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1268432336
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268432334}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 35d8dd6f94f06d345ba56cb7c2fa9a8f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10.29, y: 7.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1275021789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13030,7 +14320,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 074baf606bc201141beb1b754f472bb8, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -13045,8 +14335,41 @@ PrefabInstance:
       value: Dog Food Bowl
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Sit back, relax, and enjoy the chow. Generates some passive income while
+        you relax.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420041}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddBackgroundAutoMod
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BotHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -13229,6 +14552,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Damping: 0.6
+--- !u!1 &1289393629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289393630}
+  m_Layer: 6
+  m_Name: WinScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1289393630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289393629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1670686976}
+  - {fileID: 1536159743}
+  - {fileID: 1039619591}
+  - {fileID: 1268432335}
+  - {fileID: 1123296585}
+  m_Father: {fileID: 1771590065}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1289406692
 GameObject:
   m_ObjectHideFlags: 0
@@ -13498,7 +14857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -13509,8 +14868,45 @@ PrefabInstance:
       value: Gamer Girl Bathwater
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Guarenteed to not be hygenic. Increases the amount of money you gain
+        when banning rule breakers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseBaseBanMoney
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -13956,7 +15352,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 4e41da4f1b3854640ab7cd03d2ba2579, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -13971,8 +15367,77 @@ PrefabInstance:
       value: "AmorWrath\u2122 Shaker"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Shake things up in your life! Streamer fans will be a bit more naughty
+        in chat with this.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeIncrementUserType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: IncreaseFactionBannableBonusRate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -14242,7 +15707,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 2c10c353f42c314469e309b3b2d3d9ea, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -14257,8 +15722,45 @@ PrefabInstance:
       value: "FurFashun\u2122 Custom Head"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Become the furry you know you are inside. Increases the amount gained
+        from banning rule breakers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseBaseBanMoney
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -14998,6 +16500,151 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f75148dd55db9c24384babff981a153e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1431134218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431134219}
+  - component: {fileID: 1431134222}
+  - component: {fileID: 1431134221}
+  - component: {fileID: 1431134220}
+  m_Layer: 6
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1431134219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431134218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1039619591}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1431134220
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431134218}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 44094cac090df924b917f1705a5cb189, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.53, y: 0.75}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &1431134221
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431134218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.53, y: 0.75}
+    newSize: {x: 1.53, y: 0.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1431134222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431134218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fe7dcb3888554408bf39274fee1f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 491864294}
+        m_TargetAssemblyTypeName: WinCondition, Assembly-CSharp
+        m_MethodName: EndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  keyPress: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  render: {fileID: 0}
+  disabledSprite: {fileID: 0}
+  hoveredSprite: {fileID: 0}
+  mouseHovered: 0
+  disabled: 0
 --- !u!114 &1433540056 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9080844524886255439, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
@@ -15591,6 +17238,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1400460634}
+  - {fileID: 2136418505}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15703,11 +17351,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5ca29df8271b4b1468feeae34ea9fc40, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -15718,8 +17366,73 @@ PrefabInstance:
       value: Natsu Anime Figurine
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Comes with protective jar. Increase the ban-worthy messages made by
+        anime fans in the chat.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeIncrementUserType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: IncreaseFactionBannableBonusRate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: anime
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -15868,11 +17581,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 7c03e7f62357ff449be4f150ef7e7bec, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 3.99
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -15883,8 +17596,45 @@ PrefabInstance:
       value: Chican Plush
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: From the hot new series Seven Days in Serbia. Increases money gained
+        from interacting with AmorWrath.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseAmoInteractBonus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -16100,6 +17850,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1536159742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1536159743}
+  - component: {fileID: 1536159744}
+  m_Layer: 6
+  m_Name: Frame2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1536159743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536159742}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 917407838}
+  m_Father: {fileID: 1289393630}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1536159744
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536159742}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 9dc6eef95b52e8a469f075e173c0e006, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10.29, y: 7.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1550943242
 GameObject:
   m_ObjectHideFlags: 0
@@ -16194,6 +18029,7 @@ GameObject:
   - component: {fileID: 1575404574}
   - component: {fileID: 1575404576}
   - component: {fileID: 1575404575}
+  - component: {fileID: 1575404577}
   m_Layer: 0
   m_Name: MomButton
   m_TagString: Untagged
@@ -16243,7 +18079,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 519420043}
+      - m_Target: {fileID: 1575404577}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
         m_Mode: 2
@@ -16287,6 +18123,102 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6561419, y: 2.5353818}
   m_EdgeRadius: 0
+--- !u!82 &1575404577
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575404573}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1591069315
 GameObject:
   m_ObjectHideFlags: 0
@@ -17185,7 +19117,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1664442570}
+      - m_Target: {fileID: 901444369}
         m_TargetAssemblyTypeName: AnimatorOptions, Assembly-CSharp
         m_MethodName: PlayRandomSound
         m_Mode: 1
@@ -17315,11 +19247,93 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerGameobject: {fileID: 0}
-  randomSound:
-  - {fileID: 8300000, guid: a34fae2fa9b6c4345a664f4ab8f62d5e, type: 3}
-  - {fileID: 8300000, guid: e9f1138925e90794688a41428d1534dd, type: 3}
-  - {fileID: 8300000, guid: 0fb4533bf157d9846bcf4f569e003f44, type: 3}
-  volume: 0.25
+  randomSound: []
+  volume: 0.5
+--- !u!1 &1670686975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670686976}
+  - component: {fileID: 1670686977}
+  m_Layer: 6
+  m_Name: Frame1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1670686976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670686975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 669137007}
+  m_Father: {fileID: 1289393630}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1670686977
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670686975}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4ed44cdcd939fc14b815d6db5f3cabbd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10.29, y: 7.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!114 &1671683754 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9080844524886255439, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
@@ -17608,7 +19622,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: da549200aa5b5b947a41806c46a901b2, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -17623,8 +19637,41 @@ PrefabInstance:
       value: Yuki FankoPulp Figure
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: The box has been opened, but no one will notice. Earn some passive income
+        while this appreciates in value.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420041}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddBackgroundAutoMod
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BotHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -17874,7 +19921,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.15}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0.000000019557774}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18138,6 +20185,7 @@ Transform:
   - {fileID: 585199435}
   - {fileID: 1138265999}
   - {fileID: 1331724167}
+  - {fileID: 1289393630}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18265,7 +20313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779005908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.8, y: 3.31, z: 1}
+  m_LocalPosition: {x: 6.776, y: 3.31, z: 1}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18273,6 +20321,82 @@ Transform:
   m_Father: {fileID: 1091449979}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1781443069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1781443070}
+  - component: {fileID: 1781443072}
+  - component: {fileID: 1781443071}
+  m_Layer: 0
+  m_Name: Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1781443070
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781443069}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 394586211}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 32.97, y: 6}
+  m_SizeDelta: {x: 1971, y: 266}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1781443071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781443069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5483c8997e8a9ee4f81fb7007295c5c0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1781443072
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781443069}
+  m_CullTransparentMesh: 1
 --- !u!1 &1789373095
 GameObject:
   m_ObjectHideFlags: 0
@@ -18318,11 +20442,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 611c56ec22f58a2448d929e16ff60100, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -18333,8 +20457,73 @@ PrefabInstance:
       value: 10 Piece Entire Collection
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: There's not even 10 books. Increase the money gained from banning fur
+        faces.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeIncrementUserType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: IncreaseFactionBanBonus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: furry
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -18602,11 +20791,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 3569cfbeaf212754d934e0f80b65f825, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -18617,8 +20806,45 @@ PrefabInstance:
       value: Kouta Replica Head
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: The hair is so sharp it's banned in 17 countries. Everyone wants to
+        talk about it, even the chat.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420040}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseSecondsPerMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ServerHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -18787,11 +21013,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 04d766f8b41c15c43bf5dc5425232cc0, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -18802,8 +21028,73 @@ PrefabInstance:
       value: Pawprint Stickers
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Show your love for animals with these pawprint stickers! Increases money
+        gained from banning streamer fans.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeIncrementUserType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: IncreaseFactionBanBonus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -19488,7 +21779,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b67b24754a2a7bb45a350e4d4bc1ec32, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -19501,6 +21792,11 @@ PrefabInstance:
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: itemName
       value: Computer Ears Decoration
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Everything has fur. Gain a massive bonus to purging the rule breakers
+        within your furry fandom.
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
@@ -20141,7 +22437,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 141e5f0a57428de4aa80af8b3df9ddde, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -20156,8 +22452,73 @@ PrefabInstance:
       value: "AmorWrath\u2122 Poster"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Words to live by. Gain a massive bonus to weeding out the degenerates
+        within the streamer fans.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeIncrementUserType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: IncreaseFactionBanBonus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -20310,7 +22671,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: aa4ba4297b3a55e42b84a832ee3cfcfb, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
@@ -20325,8 +22686,45 @@ PrefabInstance:
       value: Self Care Starter Pack
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: The care you deserve. Interacting with AmorWrath gives you slightly
+        more money.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420038}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseAmoInteractBonus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -20485,11 +22883,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: eb0e6508a9d68ce4090c704125f2ad2e, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -20500,8 +22898,53 @@ PrefabInstance:
       value: Dog Diapers
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: To help with some incontinent foxes. Also helps cleanup your server,
+        banning some rule breakers you missed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420041}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420028}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddCleanupAutoMod
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BotHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
@@ -20664,7 +23107,7 @@ RectTransform:
   m_GameObject: {fileID: 2044254093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 394586211}
@@ -20672,9 +23115,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -25, y: 0}
+  m_SizeDelta: {x: 300, y: 399}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2044254095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20695,7 +23138,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7699292514a458d48bc73dc1a4efa1fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21282,6 +23725,84 @@ MonoBehaviour:
   randomSound:
   - {fileID: 0}
   volume: 0.5
+--- !u!1 &2136418504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2136418505}
+  - component: {fileID: 2136418507}
+  - component: {fileID: 2136418506}
+  - component: {fileID: 2136418508}
+  m_Layer: 0
+  m_Name: MouseClicks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2136418505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136418504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1479500760}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136418506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136418504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65036dac1910b874d80f3d4cf29b4778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+--- !u!114 &2136418507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136418504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12e6f6670c013a40ad627999a56ba6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerGameobject: {fileID: 0}
+  randomSound:
+  - {fileID: 8300000, guid: e4c24582fdcd3dd4d9b15ce0d836be99, type: 3}
+  - {fileID: 8300000, guid: f9b980920eeb9ec48b47d8401a9c9f12, type: 3}
+  - {fileID: 8300000, guid: 43f220ed81f0f59489477ecce49d272c, type: 3}
+  volume: 0.3
+--- !u!114 &2136418508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136418504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65036dac1910b874d80f3d4cf29b4778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
 --- !u!1 &2139552478
 GameObject:
   m_ObjectHideFlags: 0
@@ -21404,11 +23925,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 6a87308a4e0654b4e9b93afcb4d0990b, type: 3}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: price
-      value: 1
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: stock
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: player
@@ -21419,8 +23940,41 @@ PrefabInstance:
       value: "AmorWrath\u2122 Official Figurine"
       objectReference: {fileID: 0}
     - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: description
+      value: Just released! Limited Edition! Gain money passively through watching
+        AmorWrath's streams.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813450283153141102, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: startUnlocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420041}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddViewBot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BotHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798194824798027779, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4238786563856819199, guid: 3d9439545d9cf0f4fa096418e63c8aeb, type: 3}
       propertyPath: m_text
