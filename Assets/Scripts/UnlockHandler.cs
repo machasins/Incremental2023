@@ -11,7 +11,7 @@ public class UnlockHandler : MonoBehaviour
 
     void OnEnable()
     {
-        InstantToggleLock(isUnlocked);
+        InstantToggleLock(!isUnlocked);
     }
 
     public void Unlock()
