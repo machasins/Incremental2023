@@ -10,11 +10,10 @@ public class TwitchCoordinator : MonoBehaviour
     public GameObject miniParent;
 
     public GameObject girlStream;
-    public GameObject donateButton;
+    public GameObject girlChat;
     public GameObject guyStream;
+    public GameObject guyChat;
 
-    [HideInInspector] public bool girlOnline;
-    [HideInInspector] public bool guyOnline;
     [HideInInspector] public bool girlActive;
 
     private float streamerMessageTimeMult;
@@ -22,15 +21,13 @@ public class TwitchCoordinator : MonoBehaviour
     private float streamerBannableRateMult;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         girlActive = true;
 
-        girlOnline = true;
-        GirlSetEnabled(girlOnline, girlActive);
+        GirlSetEnabled(girlActive);
 
-        guyOnline = false;
-        GuySetEnabled(guyOnline, !girlActive);
+        GuySetEnabled(!girlActive);
 
         streamerMessageTimeMult = 1.0f;
         streamerUserTimeMult = 1.0f;
@@ -41,34 +38,35 @@ public class TwitchCoordinator : MonoBehaviour
         server.streamerBannableRateMult = 1.0f;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-    }
-
-    void GirlSetEnabled(bool isOnline, bool isActive)
+    void GirlSetEnabled(bool isActive)
     {
         if (!isActive && girlStream.transform.parent.parent != miniParent.transform)
             girlStream.transform.parent.SetParent(miniParent.transform, false);
         else if (isActive && girlStream.transform.parent.parent != normalParent.transform)
             girlStream.transform.parent.SetParent(normalParent.transform, false);
         
-        donateButton.SetActive(isOnline && isActive);
+        girlChat.SetActive(isActive);
+
+        girlStream.GetComponent<StreamController>().ToggleAudio(isActive);
     }
 
-    void GuySetEnabled(bool isOnline, bool isActive)
+    void GuySetEnabled(bool isActive)
     {
         if (!isActive && guyStream.transform.parent.parent != miniParent.transform)
             guyStream.transform.parent.SetParent(miniParent.transform, false);
         else if (isActive && guyStream.transform.parent.parent != normalParent.transform)
             guyStream.transform.parent.SetParent(normalParent.transform, false);
+        
+        guyChat.SetActive(isActive);
+        
+        guyStream.GetComponent<StreamController>().ToggleAudio(isActive);
     }
 
     public void SwitchStreams()
     {
         girlActive = !girlActive;
-        GirlSetEnabled(girlOnline, girlActive);
-        GuySetEnabled(guyOnline, !girlActive);
+        GirlSetEnabled(girlActive);
+        GuySetEnabled(!girlActive);
     }
 
     public void ImproveMessageTimeWithStream(float amount)

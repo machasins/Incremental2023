@@ -13,6 +13,7 @@ public class StreamController : MonoBehaviour
     private VideoPlayer[] videos;
     private bool[] doEarly;
     private int nextVideo = -1;
+    private bool doAudio = true;
 
     private VideoPlayer activePlayer;
     private VideoPlayer waitingPlayer;
@@ -31,6 +32,7 @@ public class StreamController : MonoBehaviour
                 videos[i] = stream.GetComponent<VideoPlayer>();
                 videos[i].url = System.IO.Path.Combine(Application.streamingAssetsPath, files[i]);
                 videos[i].loopPointReached += EndOfClipReached;
+                videos[i].GetComponent<AudioSource>().mute = true;
                 videos[i].playOnAwake = false;
 
                 videos[i].Prepare();
@@ -77,6 +79,7 @@ public class StreamController : MonoBehaviour
     void OnEnable()
     {
         videos[0].GetComponent<SpriteRenderer>().enabled = true;
+        videos[0].GetComponent<AudioSource>().mute = !doAudio;
         videos[0].Play();
 
         activePlayer = videos[0];
@@ -102,12 +105,14 @@ public class StreamController : MonoBehaviour
         else
         {
             vp.GetComponent<SpriteRenderer>().enabled = false;
+            vp.GetComponent<AudioSource>().mute = true;
             vp.Play();
             vp.Pause();
 
             if (nextVideo == -1)
             {
                 videos[0].GetComponent<SpriteRenderer>().enabled = true;
+                videos[0].GetComponent<AudioSource>().mute = !doAudio;
                 videos[0].Play();
 
                 activePlayer = videos[0];
@@ -115,6 +120,7 @@ public class StreamController : MonoBehaviour
             else
             {
                 videos[nextVideo].GetComponent<SpriteRenderer>().enabled = true;
+                videos[nextVideo].GetComponent<AudioSource>().mute = !doAudio;
                 videos[nextVideo].Play();
 
                 activePlayer = videos[nextVideo];
@@ -136,5 +142,13 @@ public class StreamController : MonoBehaviour
     public void Donate()
     {
         nextVideo = 2;
+        EndOfClipReached(activePlayer);
+    }
+
+    public void ToggleAudio(bool active)
+    {
+        if (activePlayer)
+            activePlayer.GetComponent<AudioSource>().mute = !active;
+        doAudio = active;
     }
 }

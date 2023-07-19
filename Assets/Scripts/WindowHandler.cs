@@ -14,6 +14,15 @@ public class WindowHandler : MonoBehaviour
     public GameObject discordNotification;
     public GameObject websiteSelected;
 
+    public AudioClip notifSound;
+    public float minNotifTime;
+    public GameObject activate;
+
+    private bool ableToNotif;
+    private float notifCooldown;
+
+    private AudioSource audioObject;
+
     void Start()
     {
         desktop.gameObject.SetActive(false);
@@ -26,6 +35,15 @@ public class WindowHandler : MonoBehaviour
         
         serverSwitcher.girlServer.GetComponentInChildren<MessageSpawner>().newMessage += OnRecieveMessage;
         serverSwitcher.dmServer.GetComponentInChildren<MessageSpawner>().newMessage += OnRecieveMessage;
+
+        audioObject = FindFirstObjectByType<PlayerData>().GetComponent<AudioSource>();
+    }
+
+    void FixedUpdate()
+    {
+        notifCooldown += Time.fixedDeltaTime;
+        if (notifCooldown >= minNotifTime)
+            ableToNotif = true;
     }
 
     public void OnClickWebsite()
@@ -73,5 +91,11 @@ public class WindowHandler : MonoBehaviour
     {
         if (!discord.gameObject.activeInHierarchy)
             discordNotification.SetActive(true);
+        if (ableToNotif && (!discord.gameObject.activeInHierarchy || activate.activeInHierarchy))
+        {
+            ableToNotif = false;
+            notifCooldown = 0.0f;
+            audioObject.PlayOneShot(notifSound);
+        }
     }
 }
