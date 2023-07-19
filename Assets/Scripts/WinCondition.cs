@@ -13,12 +13,13 @@ public class WinCondition : MonoBehaviour
     public GameObject finalMessage;
     public AudioClip finalSound;
     public int followerGoal;
+    public FollowerTracker follow;
 
     private bool endingStarted = false;
 
     void Update()
     {
-        if (userData.users.Count >= followerGoal && !endingStarted)
+        if (follow.amoFollowers >= followerGoal && !endingStarted)
         {
             StartEnding();
             endingStarted = true;

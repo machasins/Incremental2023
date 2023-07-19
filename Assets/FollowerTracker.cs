@@ -35,9 +35,11 @@ public class FollowerTracker : MonoBehaviour
     private bool trainModProtection;
     private float trainContinueVal;
     private float trainMinVal;
+    private float trainInteract = 1.0f;
 
     private int amoStreak;
     private float amoStreakTime = 0.0f;
+    private float amoInteract = 1.0f;
 
     void Start()
     {
@@ -57,45 +59,30 @@ public class FollowerTracker : MonoBehaviour
             }
         }
 
-        amoFollowers += (amoGainRate * Mathf.Lerp(1.0f, amoStreakMaxMult, (float)amoStreak / amoStreakMax)) * Time.fixedDeltaTime;
-        trainFollowers += trainGainRate * Time.fixedDeltaTime;
-
-        if (trainModProtection && trainFollowers >= trainContinueVal)
-        {
-            trainModProtection = false;
-            trainMinVal = 0;
-        }
+        amoFollowers += (amoGainRate * Mathf.Lerp(1.0f, amoStreakMaxMult, (float)amoStreak / amoStreakMax)) * amoInteract * Time.fixedDeltaTime;
+        trainFollowers += trainGainRate * trainInteract * Time.fixedDeltaTime;
     }
 
     public void TrainInteract(float percentCharged)
     {
-        if (!trainModProtection)
-        {
-            trainModProtection = true;
-            trainContinueVal = trainFollowers * trainContinuePercent;
-            trainMinVal = trainFollowers * trainProtectPercent;
-        }
-
-        trainFollowers -= percentCharged * trainInteractRate;
-        trainFollowers = Mathf.Clamp(trainFollowers, trainMinVal, Mathf.Infinity);
+        trainInteract = Mathf.Lerp(1.0f, 0.3333f, percentCharged);
     }
 
     public void AmoInteract(float percentCharged)
     {
-        amoFollowers += percentCharged * amoInteractRate;
-        amoFollowers = Mathf.Clamp(amoFollowers, 0, 1000);
+        amoInteract = Mathf.Lerp(1.0f, 3.0f, percentCharged);
     }
 
     public void AmoDono()
     {
         amoFollowers += amoDonoGain;
-        amoFollowers = Mathf.Clamp(amoFollowers, 0, 1000);
+        amoFollowers = Mathf.Clamp(amoFollowers, 0, Mathf.Infinity);
     }
 
     public void AmoMissedBan()
     {
         amoFollowers -= amoBanLoss;
-        amoFollowers = Mathf.Clamp(amoFollowers, 0, 1000);
+        amoFollowers = Mathf.Clamp(amoFollowers, 0, Mathf.Infinity);
         print("missed a banned message");
     }
 
